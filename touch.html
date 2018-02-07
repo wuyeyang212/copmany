@@ -1,45 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
+    <h4>
+        hhh
+    </h4>
     <script>
         var mybody = document.getElementsByTagName('body')[0];
         var h = document.documentElement.clientHeight;
-        mybody.style.height = h +"px"
+        mybody.style.height = h + "px"
 
-        var startX,startY,moveEndX,moveEndY,X,Y;
+        var startX, startY, moveEndX, moveEndY, X, Y;
 
-        mybody.addEventListener('touchstart',function(e){
+        mybody.addEventListener('touchstart', function (e) {
             e.preventDefault();
             startX = e.touches[0].pageX;
             startY = e.touches[0].pageY;
-        },false);
-        mybody.addEventListener('touchmove',function(e){
+        }, false);
+        mybody.addEventListener('touchmove', function (e) {
             e.preventDefault();
             moveEndX = e.changedTouches[0].pageX;
-            moveEndY= e.changedTouches[0].pageY;
-            X= moveEndX - startX;
+            moveEndY = e.changedTouches[0].pageY;
+            X = moveEndX - startX;
             Y = moveEndY - startY;
-            if(Math.abs(X)>Math.abs(Y) && X<0){
+            if (Math.abs(X) > Math.abs(Y) && X > 0) {
                 alert("向右");
             }
-            else if(Math.abs(X)>Math.abs(Y) && X<0){
+            else if (Math.abs(X) > Math.abs(Y) && X < 0) {
                 alert("向左");
             }
-            else if(Math.abs(Y)>Math.abs(X) && Y<0){
+            else if (Math.abs(Y) > Math.abs(X) && Y < 0) {
                 alert("向上")
             }
-            else{
+            else if (Math.abs(Y) > Math.abs(X) && Y > 0) {
+
+                alert("向下");
+
+            }
+            else {
                 alert("没滑动");
             }
         })
-       
-    
+
+
     </script>
 </body>
+
 </html>
