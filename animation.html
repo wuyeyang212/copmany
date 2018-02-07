@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .zui{
+            width: 500px;
+            height: 500px;
+        }
+        .f-l{
+            float: right;
+            margin-top: 30px;
+            margin-left: 100px;
+        }
+       @-webkit-keyframes team-logo-right{
+             0% {
+            -webkit-transform: translate3d(-145px, 0, 0) scale(2);
+            -webkit-transform-origin: center;
+            -webkit-animation-timing-function: ease-out;
+            opacity: .05
+        }
+        50%, 60% {
+            -webkit-transform: translate3d(76px, 0, 0) scale(2);
+            -webkit-transform-origin: center;
+            -webkit-animation-timing-function: cubic-bezier(.33, .95, .77, 1.01);
+            opacity: .8
+        }
+        85% {
+            -webkit-transform: translate3d(-10px, 0, 0) scale(1);
+            -webkit-animation-timing-function: ease-in;
+            -webkit-transform-origin: center;
+            opacity: 1
+        }
+        100% {
+            -webkit-transform: translate3d(0, 0, 0) scale(1);
+            -webkit-transform-origin: center;
+            opacity: 1
+            } 
+        }
+        .f-l{
+            -webkit-animation: team-logo-right 1s forwards
+        }
+    </style>
+</head>
+<body>
+    <div class="zui team-logo-left">
+        <img src="images/曼联.png" alt="" class="f-l kk  ">
+    </div>
+</body>
+</html>

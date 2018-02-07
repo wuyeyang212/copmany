@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>关于c3列表</title>
+    <style>
+        .menu-outer{
+            position: relative;
+            display: inline-block;
+            margin: 30px;
+            width: 20px;
+            height: 24px;
+            cursor: pointer;
+        }
+        .menu-outer:hover .menu{
+            background: transparent;
+        }
+        .menu-outer:hover .menu::before{
+            transform: translateY(8px) rotate(45deg);
+        }
+        .menu-outer:hover .menu::after{
+            transform: translateY(-8px) rotate(-45deg);
+        }
+        .menu{
+            position: absolute;
+            top:50%;
+            left: 50%;
+            width: 20px;
+            height: 2px;
+            padding: 8px 0;
+            transform: translate(-50%,-50%);
+            background-clip: content-box;
+            background-color: #585247;
+        }
+        .menu::after,.menu::before{
+            position: absolute;
+            left: 0;
+            display: inline-block;
+            content: '';
+            width: 100%;
+            height: 2px;
+            background-color: #585274;
+            transition: transform 0.3s,background-color 0.3s;
+        }
+        .menu::before{
+            top:0;
+        }
+        .menu::after{
+            bottom: 0;
+        }
+        /* 以下是关于的产品介绍动画 */
+        .mouse-in{
+            position: relative;
+            overflow: hidden;
+            width: 160px;
+            height: 160px;
+            margin: 60px;
+            border-radius:10%;
+            perspective: 500px;
+            transform-origin: 0 0;
+            transition: background-color 0.3s;
+
+        }
+        .mouse-in img{
+            position: absolute;
+            top:0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.3s;
+
+        }
+        .mouse-in h2,
+        .mouse-in p{
+            position: absolute;
+            padding: 0 16px;
+            color: #fff;
+            opacity: 0;
+            transform: translate3d(-160px,0,-160px);
+        }
+        .mouse-in h2{
+            bottom: 50%;
+            text-transform: uppercase;
+            /* 以上是关于字母大小写的编程 */
+            font-weight: 600px;
+            font-size:20px;
+            transition: transform 0.3s cubic-bezier(0,2.3,0.8,1),opacity 0.3s;
+        }
+        .mouse-in p{
+            top:50%;
+            font-size: 14px;
+            transition: transform 0.3s 0.1s cubic-bezier(0,2.3,0.8,1),opacity 0.3s 0.1s;
+        }
+        .mouse-in:hover{
+            background: #000;
+        }
+        .mouse-in:hover h2,
+        .mouse-in:hover p{
+            opacity: 1;
+            transform: translate3d(0,0,0);
+        }
+        .mouse-in:hover img{
+            opacity: 0.4;
+        }
+
+        /* 关于这个旋转的动画 */
+        .l-box{
+            position: relative;
+            top:0;
+            left:0;
+            width: 500px;
+            height: 500px;
+            margin: 150px;            
+        }
+        .regular-triangle{
+            position: relative;
+            left:0;
+            bottom:0;
+            overflow: hidden;
+            width: 129.90381px;
+            height: 150px;
+            transform-origin:0% 100%;
+            transform: skewY(-30deg); 
+        }
+        .clip{
+            position: absolute;
+            top:0;
+            left:0;
+            width: 150px;
+            height: 86.60254%;
+            background: red;
+            transform-origin: 0 0;
+            transform: skewY(30deg) rotate(30deg) ;
+        }
+        .clip img{
+            width: 150px;
+            height: 150px;
+        }
+        .l-list-item:nth-child(1){
+            transform: rotate(0) skewY(-30deg) translate(10%, -10%);
+        }
+
+        .l-list-item:nth-child(2){
+            transform: rotate(60deg) skewY(-30deg) translate(-107%, -117%);
+        }
+
+        .l-list-item:nth-child(3){
+            transform: rotate(120deg) skewY(-30deg) translate(-214%, -10%);
+        }
+
+        .l-list-item:nth-child(4){
+            transform: rotate(180deg) skewY(-30deg) translate(-7%, 306%);
+        }
+
+        .l-list-item:nth-child(5){
+            transform: rotate(240deg) skewY(-30deg) translate(409%, 416%);
+        }
+
+        .l-list-item:nth-child(6){
+            transform: rotate(300deg) skewY(-30deg) translate(519%, 7%);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="menu-outer">
+        <span class="menu"></span>
+    </div>
+    <div class="mouse-in">
+        <a href="javascript:;">
+            <img src="images/3.png" alt="">
+            <h2 class="l-logo">logo</h2>
+            <p>源自世界的logo</p>
+        </a>
+    </div>
+    <!-- 关于菱形的编写 -->
+    <!-- <div class="l-box">
+        <div class="regular-triangle">
+            <div class="clip">
+                <a href="#">
+                    <img src="images/3.png" alt="bg">
+                </a>
+            </div>
+        </div>
+    </div> -->
+<div class="l-box l-list">
+    <div class="l-list-item regular-triangle">
+        <div class="clip">
+            <a href="#">
+                <img src="images/3.png" alt="bg">
+                <span>1</span>
+            </a>
+        </div>
+    </div>
+    <div class="l-list-item regular-triangle">
+        <div class="clip">
+            <a href="#">
+                <img src="images/3.png" alt="bg">
+                <span>1</span>
+            </a>
+        </div>
+    </div>
+    <div class="l-list-item regular-triangle">
+        <div class="clip">
+            <a href="#">
+                <img src="images/3.png" alt="bg">
+                <span>1</span>
+            </a>
+        </div>
+    </div>
+    <div class="l-list-item regular-triangle">
+        <div class="clip">
+            <a href="#">
+                <img src="images/3.png" alt="bg">
+                <span>1</span>
+            </a>
+        </div>
+    </div>
+    <div class="l-list-item regular-triangle">
+        <div class="clip">
+            <a href="#">
+                <img src="images/3.png" alt="bg">
+                <span>1</span>
+            </a>
+        </div>
+    </div>
+    <div class="l-list-item regular-triangle">
+        <div class="clip">
+            <a href="#">
+                <img src="images/3.png" alt="bg">
+                <span>1</span>
+            </a>
+        </div>
+    </div>
+    
+
+    
+
+</div>
+
+
+</body>
+</html>
