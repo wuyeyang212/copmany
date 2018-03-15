@@ -16,15 +16,20 @@
         //这个是滚动的时间
         scrollTime: 500,
         // The class of the items which invokes the scroll animation. All anchor tags inside the element are clickable when the value is empty.
+        //调用滚动动画的项的类。当值为空时，元素内的所有锚标记都可以单击。
         navItemClassName: '',
         // Set the height of the navigation (to use as offset). 'auto' let's the plugin determine the height automatically, a number determines the height in px.
+        //设置导航的高度(用作偏移量)。“自动”让插件自动决定高度
         navHeight: 'auto',
         // If your navigation hides and is used as a dropdown on small screens setting this to true hides the dropdown after a click.
         mobileDropdown: false,
         // Additionaly you can insert the mobile nav's classname here, when left empty the plugin searches for a <ul> in the same parent element.
+        //可以再一个父元素的添加一个类名
         mobileDropdownClassName: '',
         // The window width, which functions as a breakpoint between desktop and mobile.
+        //窗口宽度，它是桌面和移动之间的断点。
         mobileBreakpoint: 1024,
+       
         // Set to 'true' if you want to enable scrollspy.
         scrollSpy: false
       };
