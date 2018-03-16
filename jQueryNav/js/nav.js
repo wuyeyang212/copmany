@@ -116,7 +116,7 @@
     scrollspy: function(navItem, scrollItems) {
       var scrollPos, changeBounds, i, l;
       scrollPos = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-//  changeBounds = window.innerHeight / 2 || document.documentElement.clientHeight / 2;
+ changeBounds = window.innerHeight / 2 || document.documentElement.clientHeight / 2;
       l = navItem.length;
 
       for (i = 0; l > i; i++) {
