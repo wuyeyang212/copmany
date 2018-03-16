@@ -1,93 +1,204 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html >
+
+<html lang="en">
+
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-	<title>导航跟随和滚动到对应文章段落</title> 
-	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script> 
-	<script src="js/nav.js"></script>  
+	<meta charset="utf-8">
+	<title>导航跟随和滚动到对应文章段落</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script src="js/nav.js"></script>
 	<style>
-body{font-size:12px; font-family:"微软雅黑",Tahoma,Arial,"宋体",sans-serif; margin:0; padding:0; background:#fff;}
-ul,li,ol{ list-style:none;}
-div,p,ul,li,ol,dl,h1,h2,h3,h4,h5,img,pre,input{margin:0; padding:0;}
-em,i{font-style:normal;}
-strong{font-weight:normal;}
-img{border:none; vertical-align:middle;}
-.clear{float:none!important; clear:both!important; margin:0; padding:0;}
-a{color:#2C2319;text-decoration:none;}
-.anchor_layer{width: 100%;}
-.anchor_layer .nav_wrap{width: 1220px; height: 120px; background-color: #535353; overflow: hidden; margin: 0 auto 40px; behavior: url(pie.htc);}
-.anchor_layer .nav_wrap.navFix{position: fixed; left: 0; top: 0; width: 100%; min-width: 1220px; border-radius: 0; z-index: 9999;}
-.anchor_layer .nav_wrap .wrap_layer{width: 1200px; height: 120px; margin: 0 auto; padding: 0 10px;}
-.anchor_layer .nav_wrap .wrap_tab{width: 120px; height: 120px; float: left;}
-.anchor_layer .nav_wrap a{width: 120px; height: 120px; border-radius: 45px; display: block; color: #fff; line-height: 120px; text-align: center; font-size: 88px; behavior: url(pie.htc);} 
-.anchor_layer .nav_wrap .active,.details_main .anchor_layer .nav_wrap a:hover{background-color: #3366cc; behavior: url(pie.htc);}  
-.cont{width: 1200px; margin: 0 auto; height: 500px; background: #ccc; border-bottom: #f00 5px solid;}
-	</style> 
+		body {
+			font-size: 12px;
+			font-family: "微软雅黑", Tahoma, Arial, "宋体", sans-serif;
+			margin: 0;
+			padding: 0;
+			background: #fff;
+		}
+
+		ul,
+		li,
+		ol {
+			list-style: none;
+		}
+
+		div,
+		p,
+		ul,
+		li,
+		ol,
+		dl,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		img,
+		pre,
+		input {
+			margin: 0;
+			padding: 0;
+		}
+
+		em,
+		i {
+			font-style: normal;
+		}
+
+		strong {
+			font-weight: normal;
+		}
+
+		img {
+			border: none;
+			vertical-align: middle;
+		}
+
+		.clear {
+			float: none!important;
+			clear: both!important;
+			margin: 0;
+			padding: 0;
+		}
+
+		a {
+			color: #2C2319;
+			text-decoration: none;
+		}
+
+		.anchor_layer {
+			max-width: 680px;
+			margin: 0 auto;
+		}
+
+		.anchor_layer .nav_wrap {
+			max-width: 680px;
+			height: 45px;
+			background-color: #535353;
+			overflow: hidden;
+			margin: 0 auto 0px;
+			behavior: url(pie.htc);
+		}
+
+		.anchor_layer .nav_wrap.navFix {
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			border-radius: 0;
+			z-index: 9999;
+		}
+
+		.anchor_layer .nav_wrap .wrap_layer {
+			max-width: 680px;
+			height: 45px;
+			margin: 0 auto;
+			padding: 0 10px;
+		}
+
+		.anchor_layer .nav_wrap .wrap_tab {
+			width: 85px;
+			height: 45px;
+			float: left;
+		}
+
+		.anchor_layer .nav_wrap a {
+			width: 77px;
+			height: 45px;
+			border-radius: 45px;
+			display: block;
+			color: #fff;
+			line-height: 45px;
+			text-align: center;
+			font-size: 14px;
+			behavior: url(pie.htc);
+		}
+
+		.anchor_layer .nav_wrap .active,
+		.details_main .anchor_layer .nav_wrap a:hover {
+			background-color: #3366cc;
+			behavior: url(pie.htc);
+		}
+
+		.cont {
+			max-width: 680px;
+			margin: 0 auto;
+			height: 500px;
+			background: #ccc;
+			border-bottom: #f00 5px solid;
+		}
+	</style>
 </head>
-<body> 
+
+<body>
 
 	<!-- <div style="height: 500px;"></div> -->
-	
+
 	<!--开始-->
+
 	<div class="anchor_layer" id="navHeight">
-		<div style="width:1220px;margin:0 auto">
-				<div class="nav_wrap" id="nav_wrap" style="position:fixed;z-index:9999">
-					<div class="wrap_layer">
-						<div class="wrap_tab">
-							<a class="tab active" href="#aa">A</a>
-						</div>
-						<div class="wrap_tab">
-							<a class="tab" href="#bb">B</a>
-						</div>
-						<div class="wrap_tab">
-							<a class="tab" href="#cc">C</a>
-						</div>
-						<div class="wrap_tab">
-							<a class="tab" href="#dd">D</a>
-						</div>
-					</div>
+
+		<div class="nav_wrap navFix" id="nav_wrap">
+
+			<div class="wrap_layer">
+				<div class="wrap_tab">
+					<a class="tab active" href="#aa">A</a>
 				</div>
+				<div class="wrap_tab">
+					<a class="tab" href="#bb">B</a>
+				</div>
+				<div class="wrap_tab">
+					<a class="tab" href="#cc">C</a>
+				</div>
+				<div class="wrap_tab">
+					<a class="tab" href="#dd">D</a>
+				</div>
+			</div>
 		</div>
-		
-	</div>  
+	</div>
+
+
 	<div class="cont" id="aa">
 		1
-	</div> 
-	<div class="cont" id="bb" style="height:10000px;background:red">
+	</div>
+	<div class="cont" id="bb" style="height:1000px;background:red">
 		2
-	</div> 
+	</div>
 	<div class="cont" id="cc">
 		3
-	</div> 
-	 
+	</div>
+
 	<div class="cont" id="dd">
 		4
 	</div>
-	<!--结束-->  
- 
+	<!--结束-->
 
 
-<div style="height: 500px;"></div>
-<script> 
-	 //内容信息导航吸顶
-	// $(document).ready(function(){ 
-	// var navHeight= $("#navHeight").offset().top; 
-	// var navFix=$("#nav_wrap"); 
-	// $(window).scroll(function(){ 
-	// 	if($(this).scrollTop()>navHeight){ 
-	// 		navFix.addClass("navFix"); 
-	// 	} 
-	// 	else{ 
-	// 		navFix.removeClass("navFix"); 
-	// 	} 
-	// 	}) 
-	// })
-//内容信息导航锚点
-   $('.nav_wrap').navScroll({
-	  mobileDropdown: true,
-	  mobileBreakpoint: 768,
-	  scrollSpy: true
-	}); 
-</script> 
+
+	<div style="height: 500px;"></div>
+	<script> 
+		//内容信息导航吸顶
+		// $(document).ready(function(){ 
+		// var navHeight= $("#navHeight").offset().top; 
+		// var navFix=$("#nav_wrap"); 
+		// $(window).scroll(function(){ 
+		// 	if($(this).scrollTop()>navHeight){ 
+		// 		navFix.addClass("navFix"); 
+		// 	} 
+		// 	else{ 
+		// 		navFix.removeClass("navFix"); 
+		// 	} 
+		// 	}) 
+		// })
+		//内容信息导航锚点
+		$('.nav_wrap').navScroll({
+			mobileDropdown: true,
+			mobileBreakpoint: 768,
+			scrollSpy: true
+		}); 
+	</script>
 </body>
+
 </html>
