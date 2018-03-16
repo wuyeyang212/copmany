@@ -1,0 +1,89 @@
+ img {
+            border: none;
+            vertical-align: middle;
+        }
+
+        .clear {
+            float: none!important;
+            clear: both!important;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: #2C2319;
+            text-decoration: none;
+        }
+
+        .anchor_layer {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .anchor_layer .nav_wrap {
+            max-width: 680px;
+            height: 45px;
+            background-color: #f7f7f7;
+            overflow: hidden;
+            margin: 0px auto 0px;
+            behavior: url(pie.htc);
+        }
+
+        .anchor_layer .nav_wrap.navFix {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            border-radius: 0;
+            z-index: 9999;
+        }
+
+        .anchor_layer .nav_wrap .wrap_layer {
+            width: 80%;
+            
+            height: 45px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+
+        .anchor_layer .nav_wrap .wrap_tab {
+            width: 50%;
+            height: 45px;
+            float: left;
+        }
+
+        .anchor_layer .nav_wrap a {
+            display: block;
+            height: 45px;
+            display: block;
+            color: #666;
+            line-height: 45px;
+            text-align: center;
+            font-size: 14px;
+            behavior: url(pie.htc);
+        }
+
+        .anchor_layer .nav_wrap .active,
+        .details_main .anchor_layer .nav_wrap a:hover {
+            color: #333;
+            behavior: url(pie.htc);
+        }
+        
+        .cont {
+            max-width: 680px;
+            margin: 0 auto;
+            background: #ccc;
+            border-bottom: #f00 5px solid;
+        }
+        .hengxian{
+            width: 35px;
+            height: 1px;
+            background: #e31436;
+            display: none;
+            margin: 0 auto;
+            margin-top: -12px;
+
+        }
+        .hhh{
+            display: block;
+        }

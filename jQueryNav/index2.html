@@ -1,0 +1,77 @@
+<!DOCTYPE html >
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>导航跟随和滚动到对应文章段落</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/coman.css">
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css">
+    <link rel="stylesheet" href="css/product.css">
+    <script src="js/mui.min.js"></script>
+    <script src="js/nav.js"></script>
+</head>
+
+<body>
+
+    <div class="anchor_layer" id="navHeight">
+
+        <div class="nav_wrap navFix" id="nav_wrap">
+
+            <div class="wrap_layer">
+                <div class="wrap_tab">
+                    <a class="tab active" href="#aa">商品
+                        <span class="hengxian "></span>
+                    </a>
+                </div>
+                <div class="wrap_tab">
+                    <a class="tab" href="#bb">详情
+                        <span class="hengxian "></span>
+                    </a>
+                     
+                </div>
+               
+            </div>
+        </div>
+    </div>
+
+
+    <div class="cont" id="aa" style="margin-top:45px;height:2000px">
+        1
+    </div>
+    <div class="cont" id="bb" style="height:1000px;background:red">
+        2
+    </div>
+  
+    <!--结束-->
+
+
+
+    <div style="height: 500px;"></div>
+    <script> 
+        //内容信息导航吸顶
+        // $(document).ready(function(){ 
+        // var navHeight= $("#navHeight").offset().top; 
+        // var navFix=$("#nav_wrap"); 
+        // $(window).scroll(function(){ 
+        // 	if($(this).scrollTop()>navHeight){ 
+        // 		navFix.addClass("navFix"); 
+        // 	} 
+        // 	else{ 
+        // 		navFix.removeClass("navFix"); 
+        // 	} 
+        // 	}) 
+        // })
+        //内容信息导航锚点
+        $('.nav_wrap').navScroll({
+            mobileDropdown: true,
+            mobileBreakpoint: 768,
+            scrollSpy: true
+        }); 
+    </script>
+</body>
+
+</html>
