@@ -4,23 +4,25 @@
 
 <head>
     <meta charset="utf-8">
-    <title>导航跟随和滚动到对应文章段落</title>
+    <title>详情页面</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="js/jquery.min.js"></script>
     <link rel="stylesheet" href="css/coman.css">
     <link rel="stylesheet" type="text/css" href="css/mui.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/product.css">
     <script src="js/mui.min.js"></script>
     <script src="js/nav.js"></script>
+    <script src="js/swiper.min.js"></script>
 </head>
 
 <body>
 
     <div class="anchor_layer" id="navHeight">
-
+        <a href="#" class="mui-icon mui-icon-arrowleft gun-yu"></a>
         <div class="nav_wrap navFix" id="nav_wrap">
-
+            
             <div class="wrap_layer">
                 <div class="wrap_tab">
                     <a class="tab active" href="#aa">商品
@@ -39,8 +41,52 @@
     </div>
 
 
-    <div class="cont" id="aa" style="height:2000px">
-        1
+    <div class="cont" id="aa" style="background:white;">
+        <div class="swiper-container" id = "swiper1">
+            <div class="swiper-wrapper h-l">
+                <div class="swiper-slide"><img src="images/1bl7k9tfl63_800_800.jpg"></div>
+                <div class="swiper-slide"><img src="images/1bl7k9tfl63_800_800.jpg"></div>
+                <div class="swiper-slide"><img src="images/1bl7k9tfl63_800_800.jpg"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="price-i">
+            <div class="price-i_left">
+                <span class="curprice">
+                    积分:
+                    <span class="curnum">
+                     79
+                    </span>
+                </span>
+               <span class="mkprice">
+             积分:456
+               </span>
+                <span class="tag">
+                    特价
+                </span>
+            </div>
+        </div>
+        <div class="J_wb_rebate" style="padding:10px 10px 0;background:white"></div>
+        <div class="n-prdinfo">
+            <h4 class="tit fn-gs">
+                 3包装 | 【官方直采】Merries 花王妙而舒 XL 38片/包 3包装 拉拉裤/学步裤
+            </h4>
+            <p class="subtit">
+                 【官方直采】【3包整箱装】棉柔弹性设计，温柔呵护宝宝娇嫩肌肤~透气柔点网层设计，让每根纤维都含植物精华，有效预防和控制尿布疹~三倍透气系列，让小PP自由呼吸，深受宝宝和妈妈的喜爱~
+            </p>
+            <div class="taginfo">
+                <img src="images/pinpai.png" alt="" class="v-bound">
+                <span class="m-bound">日本品牌</span>
+                <img src="images/pinpai.png" alt="" class="v-bound">
+                <span class="m-bound">日本品牌</span>
+            </div>
+        </div>
+        <div  class="divcon"></div>
+        <div class="form-li">
+            <ul class="form-ul">
+
+            </ul>
+        </div>
     </div>
     <div class="cont" id="bb" style="height:1000px;background:red">
         2
@@ -66,6 +112,10 @@
         // 	}) 
         // })
         //内容信息导航锚点
+        var mySwiper1 = new Swiper('#swiper1', {
+                pagination: '.swiper-pagination',
+                autoplay: 1000,
+            })
         $('.nav_wrap').navScroll({
             mobileDropdown: true,
             mobileBreakpoint: 768,
