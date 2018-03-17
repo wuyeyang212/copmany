@@ -17,6 +17,7 @@
 
         .anchor_layer {
             max-width: 680px;
+            height: 45px;
             margin: 0 auto;
         }
 
