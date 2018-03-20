@@ -11,10 +11,15 @@
     <link rel="stylesheet" href="css/coman.css">
     <link rel="stylesheet" type="text/css" href="css/mui.min.css">
     <link rel="stylesheet" href="css/swiper.min.css">
+    <link href="css/mui.picker.css" rel="stylesheet" />
+    <link href="css/mui.poppicker.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/product.css">
     <script src="js/mui.min.js"></script>
     <script src="js/nav.js"></script>
     <script src="js/swiper.min.js"></script>
+    <script src="js/mui.picker.js"></script>
+    <script src="js/mui.poppicker.js"></script>
+    <script src="js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
 <body>
@@ -84,19 +89,30 @@
         <div  class="divcon"></div>
         <div class="form-li">
             <ul class="form-ul">
-                <li>
+                <li id="showCityPicker3" class="dizhi">
                     <div class="ite-name">配&nbsp;&nbsp;送：</div>
                     <p class="kk-m">
                         <span class="sect">至</span>
-                        北京市东城区
+                        <span id="cityResult3">北京市 东城区</span>
                     </p>
-                  
+                    <a class="kkk"></a>
                 </li>
-                <li>
-                
+                <li class="y-p">
+                    <div class="ite-name">运&nbsp;&nbsp;费：</div>
+                    <p class="kk-m">
+                        满444元送223354
+                    </p>
+                    <a class="kkk"></a>
                 </li>
-                <li>
-                
+                <li class="s-m">
+                    <div class="ite-name">说&nbsp;&nbsp;明：</div>
+                    <p class="kk-m">
+                        满444元送223354
+                         满444元送223354
+                         满444元送223354
+                         满444元送223354
+                    </p>
+                    <a class="kkk"></a>
                 </li>
             </ul>
         </div>
@@ -114,7 +130,9 @@
     <a href="" class="f-b-cart">加入购物车</a>
     <a href="" class="f-k-buy">立即购买</a>
 </div>
-
+<!-- 关于模态框的写法 -->
+<div class="msak"></div>
+<div class="g-s"></div>
     <div style="height: 500px;"></div>
     <script> 
         //内容信息导航吸顶
@@ -140,6 +158,36 @@
             mobileBreakpoint: 768,
             scrollSpy: true
         }); 
+        (function ($, doc) {
+                $.init();
+                $.ready(function () {
+                    /**
+                     * 获取对象属性的值
+                     * 主要用于过滤三级联动中，可能出现的最低级的数据不存在的情况，实际开发中需要注意这一点；
+                     * @param {Object} obj 对象
+                     * @param {String} param 属性名
+                     */
+
+                    var _getParam = function (obj, param) {
+                        return obj[param] || '';
+                    };
+                    var cityPicker3 = new $.PopPicker({
+                        layer: 3
+                    });
+                    cityPicker3.setData(cityData3);
+                    var showCityPickerButton = doc.getElementById('showCityPicker3');
+                    var cityResult3 = doc.getElementById('cityResult3');
+                    showCityPickerButton.addEventListener('tap', function (event) {
+                        cityPicker3.show(function (items) {
+                            cityResult3.innerText = _getParam(items[0], 'text') + " " + _getParam(items[1], 'text') + " " + _getParam(items[2], 'text');
+                            cityResult3.style.color = "#333"
+                            //返回 false 可以阻止选择框的关闭
+                            //return false;
+                        });
+                    }, false);
+                });
+
+            })(mui, document);
     </script>
 </body>
 
