@@ -337,21 +337,86 @@
     left: 0;
     width: 100%;
     height: 100%;
+    display: none;
 }
+
 .g-s{
     position: fixed;
     z-index: 601;
     width: 100%;
-    height: 400px;
+    height: auto;
     background: white;
     bottom: 0;
-    transform: translate3d(0,0,0);
-
+    transform: translate3d(0,100%,0);
+}
+.s-m-t{
+    position: fixed;
+    z-index: 601;
+    width: 100%;
+    height: auto;
+    background: white;
+    bottom: 0;
+    /* transform: translate3d(0,100%,0); */
+}
+.silde{
+    animation: siledup .3s cubic-bezier(0.2,0.13,0,0.97);
+    animation-fill-mode: forwards;
 }
 @keyframes siledup{
-    form{transform: translate3d(0,100%,0)}
-    to{
-        transform: translate3d(0,0,0)
-    }
+    100%{transform:translate3d(0,0,0) }
 
+}
+.y-f{
+    padding: 0 10px;
+    font-weight: normal;
+    height: 43px;
+    line-height: 43px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+.c-b-t{
+    width: 30px;
+    height: 30px;
+    display: block;
+    float: right;
+    margin-top: 5px;
+    background: url(../images/ditu.png)no-repeat -27px -105px;
+    background-size: 200px;
+}
+.contant{
+    height: 100px;
+}
+.contant p{
+    padding: 10px 10px;
+    color: #333;
+}
+.g-s{
+    border-top:4px solid rgba(221,221,221,0.6)
+}
+.s-m-c{
+    padding-top: 12px;
+}
+.s-m-c li {
+    position: relative;
+    padding-right: 10px;
+}
+.titk{
+    position: relative;
+}
+.titk h5{
+    height: 40px;
+    line-height: 40px;
+    padding-left: 30px;
+    font-size: 14px;
+    color: #000;
+}
+.v-icon{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top:15px;
+    left: 10px;
+    display: block;
+    background: url(../images/ditu.png)no-repeat -97px -41px;
+    background-size: 200px;
 }

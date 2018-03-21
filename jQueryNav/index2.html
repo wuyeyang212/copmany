@@ -100,7 +100,7 @@
                 <li class="y-p">
                     <div class="ite-name">运&nbsp;&nbsp;费：</div>
                     <p class="kk-m">
-                        满444元送223354
+                        免运费
                     </p>
                     <a class="kkk"></a>
                 </li>
@@ -132,7 +132,34 @@
 </div>
 <!-- 关于模态框的写法 -->
 <div class="msak"></div>
-<div class="g-s"></div>
+<!-- 这个运费的模态框 -->
+<div class="g-s">
+    <div class="">
+        <h4 class="y-f">运费说明
+            <span class="c-b-t"></span>
+        </h4>
+        <div class="contant">
+            <p>本商品配送至北京市东城区免运费。</p>
+        </div>
+    </div>
+</div>
+<!-- 关于说明的模态框的写法 -->
+<div class="s-m-t">
+    <div>
+        <h4 class="y-f">商品说明
+            <span class="c-b-t"></span>
+        </h4>
+        <div class="contant">
+            <ul class="s-m-c">
+                <li class="titk">
+                    <h5>黑卡会员9.5折</h5>
+                    <span class="v-icon"></span>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
     <div style="height: 500px;"></div>
     <script> 
         //内容信息导航吸顶
@@ -188,6 +215,20 @@
                 });
 
             })(mui, document);
+            $('.y-p').click(function(){
+              
+                $('.msak').css('display','block');
+                $('.g-s').addClass('silde')
+            })
+            $('.c-b-t').click(function(){
+                  $('.msak').css('display', 'none');
+                   $('.g-s').removeClass('silde');
+            })
+            $('.msak').click(function () {
+              
+                    $(this).css('display', 'none');
+                    $('.g-s').removeClass('silde');
+            })
     </script>
 </body>
 
