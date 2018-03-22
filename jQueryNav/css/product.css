@@ -310,15 +310,13 @@
     -webkit-box-flex: 1;
    flex: 1;
    font-size: 12px;
-    border-top: 1px solid #ddd;
-    border-right:1px solid #ddd;
+   
 }
 .f-k-buy{
     -webkit-box-flex: 1;
     flex: 1;
      font-size: 12px;
-     border-top: 1px solid #ddd;
-    border-right:1px solid #ddd;
+     
 }
 .dizhi{
     position: relative;
@@ -427,4 +425,24 @@
     line-height: 18px;
     color: #666;
     padding-bottom: 14px;
+}
+.i-border{
+    border: none!important;
+    outline: none!important;
+    padding: 0!important;
+    text-align: center;
+    background-color: #ff8587!important;
+    height: 45px!important;
+    color: white;
+    border-radius: 0!important;
+}
+.i-borde{
+    border: none!important;
+    outline: none!important;
+    padding: 0!important;
+    text-align: center;
+    background-color: #e31436!important;
+    height: 45px!important;
+    color: white;
+    border-radius: 0!important;
 }
