@@ -356,7 +356,8 @@
     height: auto;
     background: white;
     bottom: 0;
-    /* transform: translate3d(0,100%,0); */
+    border-top: 4px solid rgba(221,221,221,0.6);
+    transform: translate3d(0,100%,0);
 }
 .silde{
     animation: siledup .3s cubic-bezier(0.2,0.13,0,0.97);
@@ -419,4 +420,11 @@
     display: block;
     background: url(../images/ditu.png)no-repeat -97px -41px;
     background-size: 200px;
+}
+.tetr{
+    padding-left: 30px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #666;
+    padding-bottom: 14px;
 }

@@ -127,7 +127,9 @@
 <div class="footer">
     <a href="" class="shou">收藏</a>
     <a href="" class="f-s-cart">购物车</a>
-    <a href="" class="f-b-cart">加入购物车</a>
+    <a href="" class="f-b-cart">
+        <input type="text" value="加入购物车">
+    </a>
     <a href="" class="f-k-buy">立即购买</a>
 </div>
 <!-- 关于模态框的写法 -->
@@ -149,12 +151,28 @@
         <h4 class="y-f">商品说明
             <span class="c-b-t"></span>
         </h4>
-        <div class="contant">
+        <div class="contants">
             <ul class="s-m-c">
                 <li class="titk">
                     <h5>黑卡会员9.5折</h5>
                     <span class="v-icon"></span>
-                    
+                    <p class="tetr">
+                         据国家政策规定，本商品适用于“跨境综合税”，实际结算税费请以提交订单时的应付总额明细为准
+                    </p>
+                </li>
+                <li class="titk">
+                    <h5>黑卡会员9.5折</h5>
+                    <span class="v-icon"></span>
+                    <p class="tetr">
+                        据国家政策规定，本商品适用于“跨境综合税”，实际结算税费请以提交订单时的应付总额明细为准
+                    </p>
+                </li>
+                <li class="titk">
+                    <h5>黑卡会员9.5折</h5>
+                    <span class="v-icon"></span>
+                    <p class="tetr">
+                        据国家政策规定，本商品适用于“跨境综合税”，实际结算税费请以提交订单时的应付总额明细为准
+                    </p>
                 </li>
             </ul>
         </div>
@@ -223,12 +241,22 @@
             $('.c-b-t').click(function(){
                   $('.msak').css('display', 'none');
                    $('.g-s').removeClass('silde');
+                   $('.s-m-t').removeClass('silde');
             })
             $('.msak').click(function () {
               
                     $(this).css('display', 'none');
                     $('.g-s').removeClass('silde');
+                    $('.s-m-t').removeClass('silde');
             })
+
+            // 关于说明框的js的函数
+             $('.s-m').click(function () {
+
+                    $('.msak').css('display', 'block');
+                    $('.s-m-t').addClass('silde')
+            })
+            
     </script>
 </body>
 
