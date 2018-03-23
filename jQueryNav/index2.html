@@ -106,19 +106,42 @@
                 </li>
                 <li class="s-m">
                     <div class="ite-name">说&nbsp;&nbsp;明：</div>
-                    <p class="kk-m">
-                        满444元送223354
-                         满444元送223354
-                         满444元送223354
-                         满444元送223354
-                    </p>
+                    <div class="kk-m">
+                        <ul >
+                            <li class="ui-de">
+                                hhahahh
+                            </li>
+                            <li class="ui-de">
+                                hhahahh
+                            </li>
+                            <li class="ui-de">
+                                hhahahh
+                            </li>
+                            <li class="ui-de">
+                                hhahahh
+                            </li>
+                            <li class="ui-de">
+                                hhahahh
+                            </li>
+                            <li class="ui-de">
+                                hhahahh
+                            </li>
+                            <div style="clear:both"></div>
+                        </ul>
+                    </div>
                     <a class="kkk"></a>
                 </li>
             </ul>
         </div>
     </div>
-    <div class="cont" id="bb" style="height:1000px;background:red">
-        2
+    <div class="cont" id="bb" style="" >
+        <div class="nei-bar">
+            <p class="oo-kk">图文详情</p>
+            <img src="images/图文详情背景图.jpg" alt="">
+        </div>
+        <p class="uu">
+            <img src="images/8023db8d8d2a492ab451edf651414b311521096108916jes5cl8411322.jpg" alt="">
+        </p>
     </div>
   
     <!--结束-->
@@ -126,8 +149,10 @@
 <!-- 关于底部的写法 -->
 <div class="footer">
     <a href="" class="shou">收藏</a>
-    <a href="" class="f-s-cart">购物车</a>
-    <a href="" class="f-b-cart">
+    <a href="" class="f-s-cart">购物车
+        <span class="biao">1</span>
+    </a>
+    <a href="javascript:;" class="f-b-cart">
         <input type="text" class="i-border" value="加入购物车">
     </a>
     <a href="" class="f-k-buy">
@@ -180,7 +205,50 @@
         </div>
     </div>
 </div>
-    <div style="height: 500px;"></div>
+<!-- 关于加入购物车的写法 -->
+<div class="j-g-c">
+    <div>
+        
+            <span class="c-b-t ui"></span>
+        
+        <div class="nei-mu">
+            <div class="nei-mu-co">
+                <div class="i-p">
+                    <img src="images/1bl7k9tfl63_800_800.jpg" alt="">
+                </div>
+                <div class="s-m-oo">
+                    <p class="ry-gs">积分：345</p>
+                    <p class="sel-c">
+                        <span>
+                            Nestlé 雀巢 健康科学小百肽全营养配方粉 400克 2罐装 适用1-10岁
+                        </span>
+                    </p>
+                
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="shu-l">
+            <span>数量：</span>
+            <div class="shu-z">
+                <span class="jia">+</span>
+                <input value="1" type="num">
+                <span class="jian">-</span>
+            </div>
+        </div>
+        <div class="footer-j">
+        确认购买
+        </div>
+    </div>
+    
+
+</div>
+<!-- 关于静态的模态框的写法 -->
+<div class="ei-kk">
+    <div class="hh-kk">添加成功</div>
+</div>
+    <div style="height: 60px;"></div>
     <script> 
         //内容信息导航吸顶
         // $(document).ready(function(){ 
@@ -244,12 +312,14 @@
                   $('.msak').css('display', 'none');
                    $('.g-s').removeClass('silde');
                    $('.s-m-t').removeClass('silde');
+                  $('.j-g-c').removeClass('silde');
             })
             $('.msak').click(function () {
               
                     $(this).css('display', 'none');
                     $('.g-s').removeClass('silde');
                     $('.s-m-t').removeClass('silde');
+                   $('.j-g-c').removeClass('silde');
             })
 
             // 关于说明框的js的函数
@@ -258,7 +328,46 @@
                     $('.msak').css('display', 'block');
                     $('.s-m-t').addClass('silde')
             })
-            
+             $('.f-b-cart').click(function(){
+                  $('.msak').css('display', 'block');
+                   $('.j-g-c').addClass('silde')
+             })
+            $(document).ready(function () {
+                    //加的效果
+                    $(".jia").click(function () {
+                        var n = $(this).next().val();
+                        var num = parseInt(n) + 1;
+                        if (num == 0) { return; }
+                        $(this).next().val(num);
+                    });
+                    //减的效果
+                    $(".jian").click(function () {
+                        var n = $(this).prev().val();
+                        var num = parseInt(n) - 1;
+                        if (num == 0) { return }
+                        $(this).prev().val(num);
+                    });
+                })
+                $(".footer-j").click(function(){
+                     $('.msak').css('display', 'none');
+                     $('.j-g-c').removeClass('silde');
+                      var display = $('.msak').css('display')
+                       var display2 = $('.j-g-c').css('display')
+                     if(display == "none"){
+                         $(".ei-kk").css("display", "block");
+                          setTimeout(function(){
+                         $(".ei-kk").css("display", "none")
+                     },800)
+                     }
+                    
+                })
+                 var maxheight = 0;
+                    for (var i = 0; i < $(".ui-de").length; i++) {
+                        if (maxheight <= $(".ui-de").eq(i).height()) {
+                            maxheight = $(".ui-de").eq(i).height();
+                        }
+                    }
+                    $(".ui-de").css('height', parseInt(maxheight) + 'px');
     </script>
 </body>
 
