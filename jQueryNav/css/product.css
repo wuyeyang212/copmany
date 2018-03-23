@@ -652,3 +652,13 @@
     padding: 0 4px;
     border: 1px solid #e31436; 
 }
+
+/* 以下是关于购物车结算页面的写法 */
+header{
+    height: 45px;
+    width: 100%;
+    max-width: 680px;;
+    background: #f7f7f7;
+    position: fixed;
+    top:0;
+}
