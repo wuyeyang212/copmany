@@ -19,6 +19,7 @@ label{
 }
 label.mark{
     background: url("../images/mark1.png") no-repeat -1px -1px;
+    background-size: 12px 12px;
 }
 
 a:hover{
