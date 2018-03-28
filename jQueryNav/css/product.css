@@ -714,6 +714,16 @@ label{
     height:  0.5rem;
     cursor: pointer;
 }
+.quanchek{
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    border: 1px solid #0c0101;
+    border-radius: 50%;
+    width: 0.5rem;
+    height:  0.5rem;
+    cursor: pointer;
+}
 .box-right{
     -webkit-box-flex: 1;
     -webkit-flex: 1;
@@ -729,7 +739,7 @@ label{
     padding-bottom: 0.266667rem;
     border-bottom: solid 1px #f0f0f0;
 }
-label.mark{
+.mark{
     background: url("../images/xuanze.png") no-repeat -1px -1px;
     background-size: 0.5rem 0.5rem;
 }
@@ -855,8 +865,13 @@ label.mark{
 .re-miu{
     width: 0.555557rem;
     height: 0.555557rem;
-    position: relative;
     border: solid 1px #aaa;
+}
+.re-mius{
+    width: 0.555557rem;
+    height: 0.555557rem;
+    border: solid 1px #aaa;
+    display: block;
 }
 .v-numberinput-minus-hotarea{
     position: absolute;
@@ -899,4 +914,119 @@ label.mark{
     width: 2px;
     height: 0.266667rem;
     background-color: #666;
+}
+.fee-er{
+    line-height: 1.8em;
+}
+.v-cartitem-price{
+    line-height: 1em;
+}
+.shanchu{
+    margin-top: -10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.s-k{
+    width: 0.386667rem;
+    height: 0.5rem;
+}
+.s-k img{
+    width: 100%;
+    height: 100%;
+}
+.shoufei{
+    padding: 0.266667rem 0.266667rem 0.266667rem;
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    -webkit-box-pack: end;
+}
+.neirongx{
+    display: flex;
+    
+}
+.zuobian{
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    text-align: right;
+    color: #333;
+    line-height: 1.4em;
+    font-size: .5em;
+}
+.jiesuan{
+    position: fixed;
+    bottom: 0px;
+    height: 3em;
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    background-color: #fff;
+    -webkit-box-align: stretch;
+}
+.bo{
+    display: flex;
+    font-size: 12px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    padding-left: 0.266667rem;
+    box-sizing: border-box;
+    border-top: solid 1px #ccc;
+}
+.x-r{
+    margin-top: 5px;
+}
+.s-kr{
+    margin-left: 8px;
+}
+.bo-di{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    -webkit-align-items: flex-end;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    padding-right: 0.266667rem;
+    box-sizing: border-box;
+    -webkit-box-pack: center;
+    border-top: solid 1px #ccc;
+}
+.cer{
+    display: flex;
+    justify-content: flex-end;
+    color: #333;
+    font-size: .8em;
+}
+.z-b{
+    font-weight: bold;
+    color: #e31436;
+}
+.xi{
+    color: #999;
+}
+.jie-btn{
+    display: flex;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+}
+.wen-zi{
+    display: flex;
+    background-color: #e31436;
+    padding: 0 0.666667rem;
+    align-items: center;
+    -webkit-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    color: #fff;
 }

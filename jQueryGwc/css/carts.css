@@ -134,6 +134,9 @@ a:hover{
     z-index: 0;
     left: -20px;
     top: -20px;
+    width: 10px;
+    height: 10px;
+    background: red;
 }
 .order_lists .list_chk label{
     margin: 20px 0 0 24px;
