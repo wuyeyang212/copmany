@@ -180,7 +180,15 @@
             <div class="wen-zi">结算</div>
         </div>
     </div>
-      
+    <!-- 关于模态框的写法 -->
+      <div  class="motai"></div>
+      <div class="chuxian">
+          <div class="s-we-zi">确定要删除吗?</div>
+          <div class="btn">
+              <span class="byn-f red">确定</span>
+              <span class="byn-f gray">取消</span>
+          </div>
+      </div>
     <!-- <script src="js/cart.js"></script> -->
     <script>
 
@@ -281,7 +289,30 @@
                     $(this).parents(".b-c-box").attr("lo", $priceTotal);
                      totalMoney();
              }) 
-             
+             //======================================移除商品========================================
+             var $order_lists = null;
+            var $order_content = '';
+            $('.s-k').click(function () {
+                $order_lists = $(this).parents('.b-c-box');
+                $order_content = $order_lists.parents('.order_content');
+                $('.motai').fadeIn(300);
+                $('.chuxian').fadeIn(300);
+            });
+            function closeM() {
+                $('.motai').fadeOut(300);
+                $('.chuxian').fadeOut(300);
+            }
+            $('.gray').click(function(){
+               closeM(); 
+            })
+            $('.red').click(
+                function(){
+                    $order_lists.remove();
+                     closeM(); 
+                     $sonCheckBox = $('.son_check');
+                      totalMoney();
+                }
+            )
              //======================================总计==========================================
 
              function totalMoney(){
