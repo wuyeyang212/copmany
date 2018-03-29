@@ -71,7 +71,7 @@
 
 <body>
 
-    <div class="target_wrap">
+    <!-- <div class="target_wrap">
 
         <div class="p-wrap p-wrap-1" id="news1"></div>
 
@@ -104,9 +104,27 @@
         <p class="nav nav-2">
             <a href="#news2">222222222</a>
         </p>
-    </div>
-
-
+    </div> -->
+<script language="javascript"> 
+    var number = -1;
+    var ssc = 52
+    window.onload = function ()//文档加载结束以后才执行
+    {
+        var height = 100;
+        number = height;
+    }
+    alert(number);//第一个执行，所以number没变化
+    function a() {
+        // alert(number);//这里number就已经在onload函数里被重新赋值了
+        alert(ssc)
+    }
+    function b(){
+        var cc = 3000;
+        ssc = cc;
+    }
+</script>
+<input type="button" value="a" onclick="a()" />
+<input type="button" value="b" onclick="b()" >
 </body>
 
 </html>
