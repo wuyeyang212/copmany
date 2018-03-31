@@ -256,8 +256,14 @@
                     
                     $(this).parents(".x-m-z").children(".fle-kk").children(".fle-bottom").children(".fee-er").children("span").html($totalfee)
                     $(this).parents(".b-c-box").attr("lo", $pricetotal);
-                    alert($fee);
-                $(this).next('input').val($count);
+                 
+                    if($count<1){
+                        $count = 1
+                        $(this).next('input').val($count);
+                    }else{
+                        $(this).next('input').val($count);
+                    }
+                
                  totalMoney();
             })
              $jia.click(function(){
