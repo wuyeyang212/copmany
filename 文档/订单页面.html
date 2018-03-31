@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>提交订单页面页面</title>
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+
+    <link href="css2/mui.picker.css" rel="stylesheet" />
+    <link href="css2/mui.poppicker.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css2/order.css" />
+    <script src="js2/mui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js2/mui.view.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js2/mui.picker.js"></script>
+    <script src="js2/mui.poppicker.js"></script>
+    <script src="js2/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js2/jquery.min.js"></script>
+
+
+
+</head>
+
+<body style="max-width:640px;margin:0 auto">
+
+    <body style="max-width:640px;margin:0 auto">
+        <!--页面主结构开始-->
+        <div id="app" class="mui-views mui-fullscreen mui-control-content mui-active" style="max-width:640px;margin:0 auto">
+            <div class="mui-view">
+                <div class="mui-navbar">
+                </div>
+                <div class="mui-pages">
+                </div>
+            </div>
+        </div>
+        <!--页面主结构结束-->
+        <!--单页面开始-->
+        <div id="setting" class="mui-page">
+            <!--页面标题栏开始-->
+            <div class="mui-navbar-inner mui-bar mui-bar-nav" style="max-width:640px;margin:0 auto">
+                <a href="javascript:history.go(-1);">
+                    <button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+                        <span class="mui-icon mui-icon-left-nav"></span>
+                    </button>
+                </a>
+                <div style="background:#f7f7f8">
+                    订单信息
+                </div>
+                <!-- <h1 class="mui-center mui-title">订单信息</h1> -->
+            </div>
+            <!--页面标题栏结束-->
+            <!--页面主内容区开始-->
+            <div class="mui-page-content">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <a href="#account">
+                            <section class="w-d-x">
+                                <span class="xingming">郭某某&nbsp;&nbsp;</span>
+                                <span class="number">1544456789</span>
+                                <p>
+                                    南昌市湾里区江西中医学院学生宿舍9栋103号
+                                </p>
+                                <span class="fu-hao">
+                                    <img src="image/右箭头.png" alt="">
+                                </span>
+                            </section>
+                        </a>
+                        <div class="bodr"></div>
+                        <section class="z-c-d">
+                            <header class="expree-xi">
+                                <div class="e-c-z">华为商城</div>
+                            </header>
+                            <div class="z-w-cen">
+                                <div class="co-wen">
+                                    <div class="sc-left">
+                                        <div class="c-img">
+                                            <img src="image/142_142_1518483439580mp.jpg" alt="">
+                                        </div>
+                                        <div class="c-wenzi">
+                                            <div class="ti-wen">
+                                                HUAWEI nova 2s 6GB+64G 全网通版（樱粉金）
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sc-right">
+                                        <div class="gu-sc">x1</div>
+                                        <div class="sd">2333</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pei-s">
+                                <div class="pei-w">配送费</div>
+                                <div class="pei-j">￥0.00</div>
+                            </div>
+                            <div class="xiao-ji">
+                                <div class="x-j">
+                                    <span>优惠：</span>
+                                    <span class="max-w">2566</span>
+                                </div>
+                                <div class="x-j">
+                                    <span>小计：</span>
+                                    <span class="max-w red">2566</span>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="y-fee">
+                            <div class="order-form-row">
+                                <p>
+                                    <span class="integral-title">优惠与抵用</span>
+                                    <span class="integral-small">
+                                        （仅适用于自营实物商品）
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="order-form-row  coupon">
+                                <a href="javascript:;">
+                                    <p class="o-subject">
+                                        <i class="icon-coupon-gray"></i>
+                                        <span id="conponText">使用优惠券</span>
+                                    </p>
+
+                                    <span class="fu-hao">
+                                        <img src="image/右箭头.png" alt="">
+                                    </span>
+
+
+                                </a>
+
+
+                            </div>
+                        </section>
+                        <!-- 支付成功模态框 -->
+                        <section class="ei-kk">
+                            支付成功
+                        </section>
+                        <!-- 支付成功模态框 -->
+                    </div>
+                </div>
+            </div>
+            <!-- 这个是这个页面的底部的导航栏 -->
+            <div class="foot-jiesuan" style="max-width:640px;margin:0 auto">
+                <div class="os-kk-l">
+                    <div class="zon-ji">
+                        <p>
+                            <span class="os-ce-wen">引用金额：</span>
+                            <span class="red bold">2599</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="xo-lo">
+                    <a href="" class="le">提交订单</a>
+                </div>
+            </div>
+            <div class="mask"></div>
+            <div class="beimian">
+                <div class="s-s-s">
+                    <p>优惠券</p>
+
+                </div>
+                <i class="icon-s"></i>
+                <div class="y-fee-ne">
+                    <input type="text" class="hhhe">
+                    <div class="hhhe-3">
+                        <a href="javascript#" class="h-in">
+                            <div class="hehhe">
+                                确认
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--单页面结束-->
+        <div id="account" class="mui-page" tyle="max-width:640px;margin:0 auto">
+
+            <div class="mui-navbar-inner mui-bar mui-bar-nav" style="max-width:640px;margin:0 auto">
+
+                <button type="button" class=" mui-navbar-left mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+                    <a href="#setting">
+                        <span class="mui-icon mui-icon-left-nav"></span>
+                    </a>
+                </button>
+                <div style="background:#f7f7f8">
+                    收货地址
+                </div>
+
+            </div>
+            <div class="mui-page-content">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+
+                        <section class="w-d-x s-d-rt">
+                            <div class="xi-ri-dd">
+                                <a href="#setting">
+                                    <span class="xingming oop">郭某某&nbsp;&nbsp;</span>
+                                    <span class="number">1544456789</span>
+                                    <p style="margin-bottom:5px">
+                                        南昌市湾里区江西中医学院学生宿舍9栋103号
+                                    </p>
+                                </a>
+
+                            </div>
+
+                            <div class="xi-li-dd">
+                                <a href="#xiugai">
+                                    <span class="">
+                                        修改
+                                    </span>
+                                </a>
+
+                            </div>
+
+                        </section>
+                        <div class="bodrs"></div>
+                        <section class="w-d-x s-d-rt">
+                            <div class="xi-ri-dd">
+                                <a href="#setting">
+                                    <span class="xingming oop">郭某某&nbsp;&nbsp;</span>
+                                    <span class="number">1544456789</span>
+                                    <p style="margin-bottom:5px">
+                                        南昌市湾里区江西中医学院学生宿舍9栋103号
+                                    </p>
+                                </a>
+                        
+                            </div>
+                        
+                            <div class="xi-li-dd">
+                                <a href="#xiugai">
+                                    <span class="">
+                                        修改
+                                    </span>
+                                </a>
+                        
+                            </div>
+                        
+                        </section>
+                        <div class="bodrs"></div>
+
+                        <section class="zhanwei"></section>
+                    </div> 
+                    <div class="foot-jiesuan" style="width:640px;margin:0 auto">
+                        <a href="#xingzeng" class="ss-ii">
+                            <div class="xiu-di">
+                                新增加地址
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+        <div id="xingzeng" class="mui-page" style="max-width:640px;margin:0 auto">
+
+            <div class="mui-navbar-inner mui-bar mui-bar-nav" style="max-width:640px;margin:0 auto">
+                <button type="button" class=" mui-navbar-left mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+                    <span class="mui-icon mui-icon-left-nav"></span>
+                </button>
+                <div style="background:#f7f7f8">
+                    新增地址
+                </div>
+            </div>
+            <div class="mui-page-content">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <ul class="mui-table-view">
+                            <li class="mui-table-view-cell" style="height: 43px;">
+                                <form class="mui-input-group">
+                                    <div class="mui-input-row">
+                                        <label>收货人:</label>
+                                        <input type="text" class="mui-input-clear" placeholder="请输入内容" style="font-size:14px;margin-top:-6px;">
+                                    </div>
+                                </form>
+                            </li>
+                            <li class="mui-table-view-cell" style="height: 43px;">
+                                <form class="mui-input-group">
+                                    <div class="mui-input-row">
+                                        <label>手机号:</label>
+                                        <input type="number" class="mui-input-clear" placeholder="请输入手机号码" style="font-size:14px;margin-top:-6px;">
+                                    </div>
+                                </form>
+                            </li>
+                            <li class="mui-table-view-cell" style="height: 44px;">
+                                <div class="nav—dizi" id="showCityPicker3">
+                                    <span>选择地址:</span>
+                                    <div class="adress-cli" id="cityResult3">
+                                        请选择你的地址
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li class="mui-table-view-cell" style="height: 127px;">
+                                <div class="nav—dizi4">
+                                    <div class="diz-left">
+                                        详细地址:
+                                    </div>
+                                    <div class="diz-right">
+                                        <textarea name="" id="" cols="30" rows="4" placeholder="请输入你的详细内容" class="shu-ru"></textarea>
+                                    </div>
+                                </div>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="foot-jiesuan" style="max-width:640px;margin:0 auto">
+                        <a href="#xiugai" class="ss-ii">
+                            <div class="xiu-di">
+                                保存并使用
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="xiugai" class="mui-page" style="max-width:640px;margin:0 auto">
+
+            <div class="mui-navbar-inner mui-bar mui-bar-nav" style="max-width:640px;margin:0 auto">
+                <button type="button" class=" mui-navbar-left mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+                    <span class="mui-icon mui-icon-left-nav"></span>
+                </button>
+                <div style="background:#f7f7f8">
+                    修改地址
+                </div>
+            </div>
+            <div class="mui-page-content">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <ul class="mui-table-view">
+                            <li class="mui-table-view-cell" style="height: 43px;">
+                                <form class="mui-input-group">
+                                    <div class="mui-input-row">
+                                        <label>收货人:</label>
+                                        <input type="text" class="mui-input-clear" value="郭某某" style="font-size:14px;margin-top:-6px;">
+                                    </div>
+                                </form>
+                            </li>
+                            <li class="mui-table-view-cell" style="height: 43px;">
+                                <form class="mui-input-group">
+                                    <div class="mui-input-row">
+                                        <label>手机号:</label>
+                                        <input type="number" class="mui-input-clear" style="font-size:14px;margin-top:-6px;" value="1544456789">
+                                    </div>
+                                </form>
+                            </li>
+                            <li class="mui-table-view-cell" style="height: 44px;">
+                                <div class="nav—dizi" id="showCityPicker34">
+                                    <span>选择地址:</span>
+                                    <div class="adress-cli" id="cityResult34">
+                                        背景
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li class="mui-table-view-cell" style="height: 127px;">
+                                <div class="nav—dizi4">
+                                    <div class="diz-left">
+                                        详细地址:
+                                    </div>
+                                    <div class="diz-right">
+                                        <textarea name="" id="" cols="30" rows="4" class="shu-ru" style="text-align:left">4654564
+                                        </textarea>
+                                    </div>
+                                </div>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="foot-jiesuan" style="max-width:640px;margin:0 auto">
+                        <a href="#xiugai" class="ss-ii">
+                            <div class="xiu-di">
+                                保存并使用
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--单页面结束-->
+        <script src="js2/oder.js" charset="utf-8"></script>
+
+    </body>
+
+</html>

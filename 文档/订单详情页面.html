@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>订单详情</title>
+    <link rel="stylesheet" href="css2/coman.css">
+    <link rel="stylesheet" href="css2/mui.min.css">
+    <link rel="stylesheet" href="css2/orderdetail.css">
+    <script src="js2/jquery.min.js"></script>
+</head>
+
+<body style="max-width:640px;margin:0 auto">
+    <header id="header" class="mui-bar mui-bar-nav" style="max-width:640px;margin:0 auto" >
+        <h1 class="mui-title">订单详情</h1>
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" href="history.go(-1)"></a>
+        <!-- <a class="mui-icon mui-icon-bars mui-pull-right"></a> -->
+    </header>
+    <div class="wia">
+        <div class="order-form">
+            <div class="stau-dingda">
+                <p class="hei">订单状态：订单已确认</p>
+                <p>订单金额：￥2799</p>
+                <p>商品总价：￥2799&nbsp;&nbsp;运费：￥0.00&nbsp;&nbsp;优惠：￥0.00</p>
+            </div>
+            <div class="stau-dingda">
+                <p>收货人：55555</p>
+                <p>商品总价：sdsdsdadasdasdasdasd</p>
+            </div>
+        </div>
+    </div>
+    <div class="peisong">
+        <p>华为终端配送</p>
+    </div>
+    <div class="lop">
+        <div class="lop-c">
+            <div class="lop-a">
+                <p class="p-img">
+                    <img src="image/142_142_1518483439580mp.jpg" alt="">
+                </p>
+                <p class="p-name">
+                    HUAWEI nova 2s 6GB+64G 全网通版（樱粉金）
+                </p>
+                <p class="p-amount">
+                    <span>x1</span>
+                </p>
+                <p class="p-price">
+                    <b>
+                        <em>¥2799.00</em>
+                    </b>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="foot-bar" style="max-width:640px;margin:0 auto">
+        <div class="yu-io">
+            <a href="javescript:;" class="button-style" id="btn-cancle">
+                <span>取消订单</span>
+            </a>
+            <a href="" class="button-style">
+                <span>修改订单</span>
+            </a>
+            <a href="" class="button-style red">
+                <span>去付款</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 底部弹出框的详情 -->
+    <div class="mask"></div>
+    <div class="beimian">
+        <div class="s-s-s">
+            <p>优惠券</p>
+
+        </div>
+        <i class="icon-s"></i>
+        <div class="cancelReason">
+            <p class="qu-r-r">请选择取消订单的原因（必选）:</p>
+            <p class="qu-r">
+                <label class="radiobox">
+                    <input name="groupA" type="radio">
+                    <i class="celectGroupI"></i>
+                </label>
+                不想买了
+            </p>
+            <p class="qu-r">
+                <label class="radiobox">
+                    <input name="groupA" type="radio">
+                    <i class="celectGroupI"></i>
+                </label>
+                不想买了
+            </p>
+            <p class="qu-r">
+                <label class="radiobox">
+                    <input name="groupA" type="radio">
+                    <i class="celectGroupI"></i>
+                </label>
+                不想买了
+            </p>
+            <p class="qu-r">
+                <label class="radiobox">
+                    <input name="groupA" type="radio">
+                    <i class="celectGroupI"></i>
+                </label>
+                不想买了
+            </p>
+            <p class="qu-r">
+                <label class="radiobox">
+                    <input name="groupA" type="radio">
+                    <i class="celectGroupI"></i>
+                </label>
+                不想买了
+            </p>
+
+        </div>
+        <button class="zui-hou">提交</button>
+    </div>
+    <script>
+        $('.mask').click(function () {
+
+            $(this).css('display', 'none');
+            $('.beimian').removeClass('silde');
+
+        })
+        $('#btn-cancle').click(function () {
+            $('.mask').css('display', 'block');
+            $('.beimian').addClass('silde');
+        })
+        $('.icon-s').click(function () {
+            $('.mask').css('display', 'none');
+
+            $('.beimian').removeClass('silde');
+
+        })
+    </script>
+</body>
+
+</html>

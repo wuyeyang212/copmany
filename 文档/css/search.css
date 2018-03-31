@@ -1,0 +1,47 @@
+.mui-title{
+    position: relative;
+   
+}
+input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select, textarea{
+    border-radius: 25px 25px;
+    height: 30px;
+}
+.mui-bar .mui-title{
+    margin: 0 -27px;
+    width: 74%;
+   
+}
+.sss{
+    position: absolute;
+right: 0px;
+margin-right: 13px;
+top: 25%;
+font-size: 14px;
+color: rgb(88, 88, 88);
+}
+body{
+    background: white;
+}
+.hot-sarch{
+    margin-top: 40px;
+    font-size: 14px;
+    margin: 50px 10px 10px;
+}
+.guanyu{
+    margin: 10px 10px;
+    height: auto;
+}
+.hh-se{
+   
+    height: 21px;
+    display: inline-block;
+    background: #f0f2f5;
+    font-size: 14px;
+    text-align: center;
+    line-height: 21px;
+    color: black;
+    margin: 10px 5px;
+}
+.hh-se i{
+    padding: 5px 8px;
+}

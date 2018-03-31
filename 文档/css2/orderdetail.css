@@ -1,0 +1,256 @@
+body{
+    font-family: Arial,
+    Helvetica,
+    sans-serif,
+    'Lucida Grande',
+    Verdana;
+    color: #333;
+    max-width: 640px;
+    margin: 0 auto;
+}
+input{
+    display:none; 
+}
+p{
+    margin-bottom: 0px;
+}
+.wia{
+    margin-top: 45px;
+    background: white;
+}
+.order-form{
+    margin: 0 1em;
+    background: white;
+}
+.stau-dingda{
+    border-bottom: 1px solid #eee;
+    padding: .2em 0;
+}
+.stau-dingda>p{
+    font-size: .5em;
+}
+.hei{
+    color: #333
+}
+.peisong{
+      margin: 0 1em;
+      line-height: 2em;
+}
+.lop{
+    background: white;
+}
+.lop-c{
+     margin: 0 .5em;
+}
+.lop-a::after{
+    clear:both;
+    content:'';
+    display:block;
+    width:0;
+    height:0;
+    visibility:hidden;
+}
+.lop-a{
+    padding: .3em 0;
+    position: relative;
+}
+.p-img{
+    width:4em;
+    height: 4em;
+    float: left;
+   margin: .2em 0;
+}
+.p-img img{
+    width: 100%;
+    height: 100%;
+}
+.p-name{
+    color: #333;
+    max-height: 2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 1;
+    padding-left: .3em;
+    padding-right: 0;
+}
+.p-amount{
+    position: absolute;
+    bottom: .45em;
+    right: 0;
+    color: #333;
+    line-height: 1;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: end;
+    -moz-box-align: end;
+    -ms-flex-align: end;
+    -webkit-align-items: flex-end;
+    -moz-align-items: flex-end;
+    align-items: flex-end;
+}
+.p-price{
+       position: absolute;
+       bottom: .4em;
+       left:4em;
+}
+.p-price>b>em{
+    font-size: .75em;
+    color: #333;
+}
+.foot-bar{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    padding: .6rem .5rem .6rem .1rem;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    justify-content: flex-end;
+} 
+
+.button-style {
+    border: 1px solid rgba(51, 51, 51, 0.3);
+    color: #333;
+    padding: 0 .65rem;
+    height: 1.2rem;
+    line-height: 2;
+    border-radius: 1rem;
+    text-align: center;
+    min-width: 1.8rem;
+    box-sizing: border-box;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: .5em;
+}
+.red {
+    color: #ca151e;
+    border:1px solid #ca151e;
+}
+
+/* 底部的弹出框 */
+.mask {
+    position: absolute;
+    background: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    z-index: 888;
+    top:0;
+
+    display: none;
+}
+.beimian {
+    position: fixed;
+    bottom: 0;
+    background: white;
+    z-index: 999;
+    height: auto;
+    width: 100%;
+    transform: translate3d(0, 100%, 0);
+}
+.s-s-s {
+    padding: .5em 2em;
+    text-align: center;
+    font-size: .9em;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+    border-bottom: 1px solid rgba(234, 234, 234, .5);
+}
+
+.s-s-s>p {
+    color: #333;
+    font-size: .9em;
+}
+
+.icon-s {
+    background: url(../image/close.png)no-repeat;
+    display: inline-block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-size: 100% 100%;
+    right: 5px;
+    top: 5px;
+}
+.cancelReason{
+    padding: 0 .3em;
+}
+.qu-r {
+        font-size: .65rem;
+        line-height: 1.75rem;
+        color: #333;
+       border-bottom: 1px solid rgba(234, 234, 234, .5);
+}
+.qu-r-r {
+    font-size: .65rem;
+    font-weight: bold;
+    line-height: 1.75rem;
+    color: #333;
+    border-bottom: 1px solid rgba(234, 234, 234, .5);
+}
+.radiobox i{
+    margin-top: .1em;
+    webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(../image/radio.png) no-repeat;
+    border: 0 none;
+    display: block;
+    width: .9rem;
+    height: .9rem;
+    background-position: 0 0;
+    background-size: 100% 200%;
+    vertical-align: middle;
+    -webkit-box-flex: 0;
+    -moz-flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+.radiobox {
+        display: inline-block;
+        margin-top: .1em;
+}
+.zui-hou{
+    width: 100%;
+    background: #ca151e;
+    color: #fff;
+    border: none;
+    line-height: 2em;
+}
+@keyframes siledup {
+    100% {
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@-webkit-keyframes siledup {
+    100% {
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+.silde {
+    animation: siledup .3s cubic-bezier(0.2, 0.13, 0, 0.97);
+    -webkit-animation: siledup .3s cubic-bezier(0.2, 0.13, 0, 0.97);
+    animation-fill-mode: forwards;
+}
