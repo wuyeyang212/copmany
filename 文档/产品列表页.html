@@ -57,7 +57,7 @@
 
 
     <div class="caini_nav" style="margin-top:50px;">
-       
+
         <div class="caini_contant2">
             <div class="caini_contant">
                 <a href="" class="tupian">
@@ -78,66 +78,66 @@
                 </div>
             </div>
         </div>
-    <div class="caini_contant2">
-        <div class="caini_contant">
-            <a href="" class="tupian">
-                <img src="image/zhuomiantubiao.png">
-            </a>
-            <div class="text-p">
-                <p>黑茶赤壁赵李桥-2012特制珍藏青砖茶1700克(330*150mm)</p>
-            </div>
-            <div class="caini_botoom">
-                <p>积分:
-                    <span style="font-weight: bold;">355</span>
-                </p>
-                <div class="cart_block">
-                    <a href="www.baidu.cn">
-                        <img src="image/gouwy.png" style="width:15px;height:15px" alt="">
-                    </a>
+        <div class="caini_contant2">
+            <div class="caini_contant">
+                <a href="" class="tupian">
+                    <img src="image/zhuomiantubiao.png">
+                </a>
+                <div class="text-p">
+                    <p>黑茶赤壁赵李桥-2012特制珍藏青砖茶1700克(330*150mm)</p>
+                </div>
+                <div class="caini_botoom">
+                    <p>积分:
+                        <span style="font-weight: bold;">355</span>
+                    </p>
+                    <div class="cart_block">
+                        <a href="www.baidu.cn">
+                            <img src="image/gouwy.png" style="width:15px;height:15px" alt="">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="caini_contant2">
-        <div class="caini_contant">
-            <a href="" class="tupian">
-                <img src="image/zhuomiantubiao.png">
-            </a>
-            <div class="text-p">
-                <p>黑茶赤壁赵李桥-2012特制珍藏青砖茶1700克(330*150mm)</p>
-            </div>
-            <div class="caini_botoom">
-                <p>积分:
-                    <span style="font-weight: bold;">355</span>
-                </p>
-                <div class="cart_block">
-                    <a href="www.baidu.cn">
-                        <img src="image/gouwy.png" style="width:15px;height:15px" alt="">
-                    </a>
+        <div class="caini_contant2">
+            <div class="caini_contant">
+                <a href="" class="tupian">
+                    <img src="image/zhuomiantubiao.png">
+                </a>
+                <div class="text-p">
+                    <p>黑茶赤壁赵李桥-2012特制珍藏青砖茶1700克(330*150mm)</p>
+                </div>
+                <div class="caini_botoom">
+                    <p>积分:
+                        <span style="font-weight: bold;">355</span>
+                    </p>
+                    <div class="cart_block">
+                        <a href="www.baidu.cn">
+                            <img src="image/gouwy.png" style="width:15px;height:15px" alt="">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="caini_contant2">
-        <div class="caini_contant">
-            <a href="" class="tupian">
-                <img src="image/zhuomiantubiao.png">
-            </a>
-            <div class="text-p">
-                <p>黑茶赤壁赵李桥-2012特制珍藏青砖茶1700克(330*150mm)</p>
-            </div>
-            <div class="caini_botoom">
-                <p>积分:
-                    <span style="font-weight: bold;">355</span>
-                </p>
-                <div class="cart_block">
-                    <a href="www.baidu.cn">
-                        <img src="image/gouwy.png" style="width:15px;height:15px" alt="">
-                    </a>
+        <div class="caini_contant2">
+            <div class="caini_contant">
+                <a href="" class="tupian">
+                    <img src="image/zhuomiantubiao.png">
+                </a>
+                <div class="text-p">
+                    <p>黑茶赤壁赵李桥-2012特制珍藏青砖茶1700克(330*150mm)</p>
+                </div>
+                <div class="caini_botoom">
+                    <p>积分:
+                        <span style="font-weight: bold;">355</span>
+                    </p>
+                    <div class="cart_block">
+                        <a href="www.baidu.cn">
+                            <img src="image/gouwy.png" style="width:15px;height:15px" alt="">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <div class="footer-bar">
         Copyright(c)2015 Amaze UI All Rights Reserved
@@ -146,7 +146,6 @@
     <script src="js/swiper.min.js"></script>
     <script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
     <script>
-
         $("#input").bind({
             click: function () {
                 $("#barnav").addClass('barnav');
@@ -162,16 +161,20 @@
             $(".new_li").height(todalHeight);
             var index = 0;
             var autoTimer = 0;
+
             function tab() {
                 $(".new_li").stop().animate({
                     top: -index * liHeight
                 }, 400, function () {
                     if (index == $(".new_li li").length - 1) {
-                        $(".new_li").css({ top: 0 });
+                        $(".new_li").css({
+                            top: 0
+                        });
                         index = 0;
                     }
                 })
             }
+
             function next() {
                 index++;
                 if (index > $(".new_li li").length - 1) {

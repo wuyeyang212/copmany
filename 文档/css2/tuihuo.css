@@ -1,0 +1,273 @@
+body {
+    font-family: Arial, Helvetica, sans-serif, 'Lucida Grande', Verdana;
+    color: #333;
+    max-width: 640px;
+    margin: 0 auto;
+}
+header {
+    height: 45px;
+    width: 100%;
+    max-width: 680px;
+    background: #f7f7f7;
+    position: fixed;
+    top: 0;
+}
+
+.lop {
+    background: white;
+    margin-top: 48px;
+}
+
+.lop-c {
+    margin: 0 .5em;
+}
+
+.lop-a::after {
+    clear: both;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.lop-a {
+    padding: .3em 0;
+    position: relative;
+}
+
+.p-img {
+    width: 4em;
+    height: 4em;
+    float: left;
+    margin: .2em 0;
+}
+
+.p-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.p-name {
+    color: #333;
+    max-height: 2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 1;
+    padding-left: .3em;
+    padding-right: 0;
+}
+
+.p-amount {
+    position: absolute;
+    bottom: .45em;
+    right: 0;
+    color: #333;
+    line-height: 1;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: end;
+    -moz-box-align: end;
+    -ms-flex-align: end;
+    -webkit-align-items: flex-end;
+    -moz-align-items: flex-end;
+    align-items: flex-end;
+}
+
+.p-price {
+    position: absolute;
+    left: 4em;
+}
+
+.p-price>b>em {
+    font-size: .75em;
+    color: #333;
+}
+.shu-l{
+    margin-top: 5px;
+    background: white;
+}
+.shu-c {
+    margin: 0 .5em;
+    padding: 1px 0;
+}
+.shu-l::after {
+    clear: both;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.shu-a {
+    padding: .3em 0;
+    position: relative;
+    display: flex;
+    font-size: .75em;
+     line-height: 1.55557rem;
+}
+.hir {
+    width: 4rem !important;
+    height: 1.555557rem !important;
+    line-height: 0.555557rem !important;
+    margin: 0 auto;
+    padding: 0 0 !important;
+    text-align: center;
+    border: solid 1px #aaa !important;
+    margin-bottom: 0px !important;
+    margin-left: -3px;
+    position: absolute;
+    left:1.7rem;
+}
+.re-miu{
+    display: inline-block;
+    width: 1.555557rem;
+    height : 1.555557rem;
+    line-height: 1.55557rem;
+    border: solid 1px #aaa;
+    text-align: center;
+    border-radius: 3px;
+     margin-top: -3px;
+     position: absolute;
+     top:3px;
+}
+.right{
+    position: absolute;
+    left: 5.4rem;
+}
+.jiajian{
+    position: relative;
+    left: 1%;
+    width: 7.2rem;
+}
+.shu--t {
+    padding: .3em 0;
+    position: relative;
+    font-size: .75em;
+    line-height: 1.55557rem;
+}
+.wenzi{
+    line-height: 1.55557rem;
+    font-size: .75em;
+    font-weight: bold;
+    margin-top: 3px;
+}
+.shh{
+    font-size: .75rem;
+}
+.wenzi span{
+    font-weight: normal;
+}
+.sj-j-h  {
+    display: flex;
+    align-items: flex-start;
+}
+.sj-f{
+    width: 17%;
+    margin: 5px 5px;
+    border: 1px dotted #333;
+    height: 4.1rem;
+    -moz-box-flex: 1;
+    box-sizing: border-box;
+}
+.sj-j-h{
+
+}
+.sj-f img{
+    width: 2.1rem;
+    height: 2.1rem;
+    display: block;
+    margin: 0 auto;
+    margin-top: 0.8rem;
+}
+.footer-sj{
+      padding: .3em .5em;
+}
+.footer-sj li{
+    font-size: .75rem;
+    color: #8f8f94;
+}
+.footer-sj li p{
+    text-indent: 20px;
+    font-size: .75rem;
+}
+.footwe{
+    height:2.5rem;
+    background:#ca151e;
+    position: fixed;
+    line-height: 2.5rem;
+    z-index: 400;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+.footwe button{
+    background: none;
+    border: none;
+    color: #fff;
+    line-height: 1.5rem;
+}
+em{
+    color: #ca151e;
+}
+
+.neirong-z{
+    font-size: .8em;
+    line-height: 1.5em;
+    color: #aaa;
+    margin-bottom: 10px;
+}
+.ss-c{
+    line-height: 1.2em
+}
+
+
+
+
+.mask{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    z-index:500;
+    top:0;
+    left: 0;
+    display: none;
+}
+.zui-hou{
+    background: white;
+    position: fixed;
+    z-index: 600;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+.que-hu{
+    padding: 1.8em 2.8em;
+    font-size: .8em;
+}
+.houmian{
+    border-bottom: 1px solid rgb(184, 184, 184);
+}
+.houmian span{
+    display: inline-block;
+    width:50%;
+    float: left;
+    text-align: center;
+    padding: .5em 0;
+    font-size: .8em;
+}
+.diyi-b{
+    border-right: 1px solid rgb(184, 184, 184);
+    color: #ca151e;
+}

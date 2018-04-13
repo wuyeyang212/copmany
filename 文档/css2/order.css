@@ -168,8 +168,10 @@ body{
 
 
 
-
-
+.mui-bar{
+	-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, .3);
+	 box-shadow: 0 0 1px rgba(0, 0, 0, .3);
+}
 		
 p{
 	margin-top: 0;
@@ -271,6 +273,7 @@ input{
 	margin-top: 20px;
 	width: 100%;
 	background: white;
+
 	height: auto;
 }
 .dixia-content{
@@ -565,6 +568,7 @@ input{
 	height: 40px;
 	width: 100%;
 	position: fixed;
+	z-index: 10000;
 	background: white;
 	display: flex;
     -webkit-box-align: center;
@@ -825,4 +829,61 @@ input{
 	color: white;
 	font-size: .5rem;
 	display: none;
+}
+
+
+/* 关于新增页面的写法 */
+.o-subjects>input[type="checkbox"] {
+	display: none;
+}
+.o-subjects>label {
+	position: relative;
+	display:block;
+	z-index: 1;
+	border: 1px solid #0c0101;
+	border-radius: 50%;
+	width: 1rem;
+	top:3px;
+	height: 1rem;
+	cursor: pointer;
+}
+.mark {
+	background: url("../images/xuanze.png") no-repeat -1px -1px;
+	background-size: 1rem 1rem;
+}
+.fled{
+	display: -webkit-box;
+	 display: -webkit-flex;
+	 -webkit-box-direction: normal;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	
+	justify-content: flex-start;
+}
+.o-subjects{
+	height: auto;
+	display: inline-block;
+	-moz-box-align: center;
+	-webkit-box-align: center;
+}
+.zi-wen{
+	display: inline-block;
+	color: #333;
+	margin-left: 2px;
+}
+
+.shou-kk{
+	display: inline-block;
+	padding:0px 0px!important;
+	margin-bottom: 0px !important;
+	height:20px !important;
+	border:none !important;
+	width: 50% !important;
+	font-size: 12px!important;
+	
+}
+.sl-kk{
+	display: none;
+	
 }

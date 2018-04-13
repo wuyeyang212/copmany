@@ -109,3 +109,23 @@ $('.icon-s').click(function () {
 	$('.beimian').removeClass('silde');
 
 })
+
+$('.oo-pp').each(function(){
+	$(this).click(function(){
+		if ($(this).attr('checked')){
+			$('.oo-pp').removeAttr('checked');
+			$('.oo-pp').next().removeClass("mark");
+			$(this).attr('checked', 'checked');
+			$(this).next("label").addClass("mark");
+			if ($(".lll-op").is(":checked")){
+				$(".sl-kk").css("display","block")
+			}else{
+				$(".sl-kk").css("display", "none")
+			}
+		}
+	})
+})
+
+		
+		
+
