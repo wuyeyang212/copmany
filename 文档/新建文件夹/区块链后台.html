@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css2/coman.css">
+    <link rel="stylesheet" href="css2/mui.min.css">
+    <link rel="stylesheet" href="css2/tuihuo.css">
+    <script src="js2/jquery-1.8.2.min.js"></script>
+    <style>
+        .ll-i{
+            left: 0;
+            width: 7rem!important;
+        }
+        .shu-l{
+            margin-top: 0;
+            padding: 5px;
+            border-top:1px solid #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="mui-bar mui-bar-nav" style="max-width:640px;margin:0 auto">
+        <h1 class="mui-title">换货详情页</h1>
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" href="history.go(-1)"></a>
+        <!-- <a class="mui-icon mui-icon-bars mui-pull-right"></a> -->
+    </header>
+    <div class="shu-l" style="margin-top:45px">
+        <div class="shu-c">
+            <div class="shu-a">
+                选择框:
+                <div class="jiajian">
+                 radio单选项1
+                <input class="radio2" type="radio" name="radio2" value="radio单选项1" /> 
+                radio单选项2
+                <input class="radio2" type="radio" name="radio2" value="radio单选项2" /> 
+               
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="shu-l">
+        <div class="shu-c">
+            <div class="shu-a">
+                选择框:
+                <div class="jiajian">
+                    radio单选项1
+                    <input class="radio2" type="radio" name="radio4" value="radio单选项1" /> radio单选项2
+                    <input class="radio2" type="radio" name="radio4" value="radio单选项2" />
+    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="shu-l">
+        <div class="shu-c">
+            <div class="shu-a">
+                金额:
+                <div class="jiajian">
+                    <span class="re-miu jia">+</span>
+                    <input type="number" value="1" class="hir shu-ze">
+                    <span class="re-miu right jian">-</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="shu-l">
+        <div class="shu-c">
+            <div class="shu-a">
+               电话号码：
+                <div class="jiajian">
+                   <input type="number" name="" class="hir ll-i" onkeyup="value=value.replace(/[^\d]/g,'')">
+                </div>
+            </div>
+        </div>
+    </div>
+  
+   
+    
+   
+    <div class="footwe">
+        <button>提交</button>
+    </div>
+    <!-- 模态框的显示 -->
+    <div class="mask"></div>
+    <div class="zui-hou">
+        <div class="que-hu">
+            确认换货吗？
+        </div>
+        <div class="houmian">
+            <span class="diyi-b">确定</span>
+            <span>取消</span>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(".jia").click(function () {
+                var n = $(".shu-ze").val();
+               
+                var num = parseFloat(n) + 1;
+                    console.log(num);
+                if (num == 0) { return; }
+               $(".shu-ze").val(num);
+            });
+            //减的效果
+            $(".jian").click(function () {
+                var n = $(".shu-ze").val();
+                var num = parseFloat(n) - 1;
+                if (num == 0) { return }
+                $(".shu-ze").val(num);
+            });
+    </script>
+</body>
+
+</html>
