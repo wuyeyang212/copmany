@@ -887,3 +887,6 @@ input{
 	display: none;
 	
 }
+.mui-input-row .mui-input-clear~.mui-icon-clear{
+	top:2px;
+}
