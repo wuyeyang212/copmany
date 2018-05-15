@@ -669,6 +669,7 @@ header{
     max-width: 680px;;
     background: #f7f7f7;
     position: fixed;
+    z-index: 9999;
     top:0;
 }
 .zh-ji{
@@ -679,8 +680,11 @@ header{
     text-align: center;
     font-size: 18px;
 }
-.b-g-box{
+.b-g-box-m{
     margin-top: 45px;
+}
+.b-g-box{
+    margin-top: 5px;
     background: white;
 }
 .b-c-box{
@@ -698,6 +702,19 @@ header{
     display: -webkit-box;
     display: -webkit-flex;
 
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center
+}
+.box-zhu {
+    width: 1.013333rem;
+    height: 1.133333rem;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -1075,4 +1092,19 @@ label{
 }
 .gray{
     color: #333;
+}
+.di-b{
+    border-bottom: 1px solid #ececec;
+}
+.hi-title{
+    text-align: center;
+    display: inline-block;
+    line-height: 1.133333rem;
+    font-size: 0.33337rem;
+}
+.img-srr{
+    width: 0.453333rem;
+    height: 0.36rem;
+    margin-right: 0.133333rem;
+    margin-top: 0.33332rem;
 }

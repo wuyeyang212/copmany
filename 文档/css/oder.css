@@ -496,3 +496,16 @@ width: 93%;
   margin-top: 10px;
   border-top:3px solid #c1c0c0;
 }
+.guenyu-pei{
+  border-bottom: 1px solid #e3e3e3;
+  line-height: 1.888887rem;
+      font-weight: bold;
+      color: rgb(51, 51, 51);
+      top: 0.1em;
+      display: block;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      padding-left: 1.1em;
+      overflow: hidden;
+      background: url(../image/物流小车车.png) left center / 0.9em 0.9em no-repeat;
+}
