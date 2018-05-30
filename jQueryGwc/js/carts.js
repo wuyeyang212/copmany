@@ -9,7 +9,8 @@ $(function () {
         $wholeChexbox = $('.whole_check'),
         $cartBox = $('.cartBox'),                       //每个商铺盒子
         $shopCheckbox = $('.shopChoice'),               //每个商铺的checkbox
-        $sonCheckBox = $('.son_check');                 //每个商铺下的商品的checkbox
+        $sonCheckBox = $('.son_check'); 
+        alert($wholeChexbox.html()) //每个商铺下的商品的checkbox
     $allCheckbox.click(function () {
         if ($(this).is(':checked')) {
             $(this).next('label').addClass('mark');

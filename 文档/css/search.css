@@ -7,15 +7,18 @@ input[type=color], input[type=date], input[type=datetime-local], input[type=date
     height: 30px;
 }
 .mui-bar .mui-title{
-    margin: 0 -27px;
-    width: 74%;
+    margin: 0 -41px;
+    width: 80%;
+    line-height: 40px;
    
 }
 .sss{
     position: absolute;
+    display: block;
 right: 0px;
-margin-right: 13px;
-top: 25%;
+width: 10%;
+margin-right: 10px;
+top: 26%;
 font-size: 14px;
 color: rgb(88, 88, 88);
 }
