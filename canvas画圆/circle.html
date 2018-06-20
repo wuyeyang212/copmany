@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .bg {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            background: #192f47;
+            display: flex;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div id="canvas"></div>
+    </div>
+
+    <script>
+        var canvas = document.getElementById('canvas');
+        let ctx = canvas.getContext('2d');
+        canvas.width = Math.ceil(300 / 1920 * window.innerWidth);
+        canvas.height = Math.ceil(300 / 1920 * window.innerWidth);
+        class Annulus {
+            constructor(obj = {}) {
+                /* 
+                 * speed -- 速度 
+                 * color -- 颜色
+                 * size -- 大小 * lineWidth -- 线宽
+                 * location -- 圆心位置
+                 * text -- 文字 
+                 * value -- 圆环滚动的值 ，这里指是百分比
+                 */
+                this.size = 100;
+                this.lineWidth = 10;
+                this.location = obj.location || {
+                    x: canvas.width / 2,
+                    y: canvas.height / 2
+                };
+            }
+            //绘制进度条背景
+            drawBg() {
+                ctx.beginPath();
+                ctx.strokeStyle = "#2d4264";
+                ctx.lineWidth = 10;
+                ctx.lineCap = "round";
+                ctx.arc(this.location.x, this.location.y, 100, Math.PI * 0.75, Math.PI * 2.25, false);
+                ctx.stroke();
+            }
+            //绘制进度条
+            drawCircleLay() {
+                ctx.beginPath();
+                var gradient = ctx.createLinearGradient(0, this.linearLocation().start, 0, this.linearLocation().end);
+                gradient.addColorStop(0, '#0f6cd9');
+                gradient.addColorStop(1, '#05a6da');
+                ctx.strokeStyle = gradient;
+                ctx.lineWidth = this.lineWidth;
+                ctx.lineCap = "round";
+                ctx.arc(this.location.x, this.location.y, this.size, Math.PI * 0.75, Math.PI * 2.25, false);
+                ctx.stroke();
+            }
+            //设定渐变背影的起始点和结束点
+            linearLocation() {
+                let start = this.location.y - ((this.size - 15) * 2 + this.lineWidth) / 2;
+                let end = start + (this.size - 15) * 2 + this.lineWidth
+                return {
+                    start: atart,
+                    end: end
+                }
+            }
+            //绘制中心的大圆
+            drawCenterCircle() {
+                ctx.beginPath();
+                var gradient = ctx.createLinearGradient(0, this.linearLocation().start, 0, this.linearLocation().end);
+                gradient.addColorStop(0, '#39a8ce');
+                gradient.addColorStop(1, '#5647c9');
+                ctx.fillStyle = gradient;
+                ctx.arc(this.location.x, this.location.y, this.size - 15, 0, Math.PI * 2, false);
+                ctx.fill();
+
+            }
+            //绘制大圆边缘的边
+            drawCenterBorderCircle() {
+                ctx.beginPath();
+                ctx.stokeStyle = 'rgba(0,0,0,0.3)';
+                ctx.lineWidth = 10;
+                ctx.arc(this.location.x, this.location.y, this.size - 20, 0, Math.PI * 2, false);
+                ctx.stroke();
+
+            }
+            //绘制进度文字
+            drawTextPercent(percent) {
+                ctx.beginPath();
+                ctx.font = "31px Arial";
+                ctx.fillStyle = "#192f47";
+                ctx.fillText('100%', this.location.x, this.location.y);
+                ctx.stroke();
+
+            }
+            //绘制进度下面的文字
+            drawTextName() {
+                ctx.beginPath();
+                ctx.font = '31px Arial';
+                ctx.textAlign = "cneter";
+                ctx.fillStyle="#192f47";
+                ctx.fillText()
+            }
+            //定义动画
+            anmiate() {
+
+            }
+            //执行
+            run() {
+                this.animate();
+            }
+        }
+    </script>
+</body>
+
+</html>

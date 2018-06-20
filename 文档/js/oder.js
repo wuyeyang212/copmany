@@ -63,3 +63,8 @@ var view = viewApi.view;
         //                console.log(e.detail.page.id + ' back');
     });
 })(mui);
+
+$('.ff-di').click(function(){
+	alert("122");
+	location.href ="#setting"
+})
