@@ -1,0 +1,84 @@
+<!DOCTYPE html >
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>详情页面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js2/jquery.min.js"></script>
+    <link rel="stylesheet" href="css2/coman.css">
+   
+   
+    <link rel="stylesheet" href="css2/product.css">
+    <script src="js2/nav.js"></script>
+   
+</head>
+
+<body style="max-width:640px;margin:0 auto">
+
+    <div class="anchor_layer" id="navHeight">
+       
+        <div class="nav_wrap navFix" id="nav_wrap">
+
+            <div class="wrap_layer">
+                <div class="wrap_tab">
+                    <a class="tab active" href="#aa">商品
+                        <span class="hengxian "></span>
+                    </a>
+                </div>
+                <div class="wrap_tab">
+                    <a class="tab" href="#bb">详情
+                        <span class="hengxian "></span>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="cont" id="aa" style="background:red;height:550px;">
+       
+    </div>
+    <div class="cont" id="bb">
+        <div class="nei-bar">
+            <p class="oo-kk">图文详情</p>
+            <img src="images/图文详情背景图.jpg" alt="">
+        </div>
+        <p class="uu">
+            <img src="images/8023db8d8d2a492ab451edf651414b311521096108916jes5cl8411322.jpg" alt="">
+        </p>
+    </div>
+
+    <!--结束-->
+
+   
+    <script>
+        //内容信息导航吸顶
+        // $(document).ready(function(){ 
+        // var navHeight= $("#navHeight").offset().top; 
+        // var navFix=$("#nav_wrap"); 
+        // $(window).scroll(function(){ 
+        // 	if($(this).scrollTop()>navHeight){ 
+        // 		navFix.addClass("navFix"); 
+        // 	} 
+        // 	else{ 
+        // 		navFix.removeClass("navFix"); 
+        // 	} 
+        // 	}) 
+        // })
+        //内容信息导航锚点
+       
+        $('.nav_wrap').navScroll({
+            mobileDropdown: true,
+            mobileBreakpoint: 768,
+            scrollSpy: true
+        });
+        
+    </script>
+</body>
+
+</html>

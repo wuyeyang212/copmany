@@ -285,8 +285,8 @@
       alert(111);
       var $this = $(this);
       var index = $this.index();
-      $(".dingdan ul li a").removeClass("ry");
-      $(".dingdan ul li a").eq(index).addClass("ry");
+      $(".dingdan ul li ").removeClass("ry");
+      $(".dingdan ul li").eq(index).addClass("ry");
       $(".dingdan-bottom ul li").css("display", "none");
       $(".dingdan-bottom ul li").eq(index).css("display", "block");
     })
