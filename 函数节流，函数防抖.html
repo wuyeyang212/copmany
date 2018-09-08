@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .nothing {
+            width: 200px;
+            height: 300px;
+            border: 1px solid red;
+            overflow-y: scroll;
+        }
+
+        .nothingiu {
+            width: 200px;
+            height: 300px;
+            border: 1px solid red;
+            overflow-y: scroll;
+            margin-top: 50px;
+        }
+
+        .fandou {
+            width: 200px;
+            height: 300px;
+            border: 1px solid red;
+            overflow-y: scroll;
+            margin-top: 50px;
+        }
+
+        .scroll {
+            height: 5000px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nothing" id="nothing">
+        普通滚动
+        <div class="scroll"></div>
+    </div>
+    <div class="nothingiu" id="second">
+        函数节流
+        <div class="scroll"></div>
+    </div>
+    <div class="fandou" id="fandou">
+        函数防抖
+        <div class="scroll"></div>
+    </div>
+    <script>
+        document.getElementById("nothing").onscroll = function () {
+            console.log("普通滚动")
+        }
+        //函数节流
+        //函数节流是在场景滚动的时候使用
+        var canRun = true;
+        document.getElementById("second").onscroll = function () {
+            if (!canRun) {
+                //判断是否，如果在执行中，则直接return
+                return;
+            }
+            canRun = false;
+            setTimeout(function () {
+                console.log("函数节流");
+                canRun = true;
+            }, 300)
+        };
+        //函数防抖
+        //函数防抖使用的场景是用户验证的时候使用
+        // 函数防抖的实现重点，就是巧用setTimeout做缓存池，而且可以轻易地清除待执行的代码。
+        //  其实，用队列的方式也可以做到这种效果。这里就不深入了。
+        var timer = false;
+        document.getElementById("fandou").onscroll = function () {
+            clearTimeout(timer);
+            timer = setTimeout(function () {
+                console.log("函数防抖")
+            }, 300)
+        }
+    </script>
+</body>
+
+</html>
