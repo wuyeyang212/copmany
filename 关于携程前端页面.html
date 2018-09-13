@@ -9,6 +9,7 @@
     <style>
         .container {
             text-align: center;
+            height: 60px;
         }
 
         .sort {
@@ -26,6 +27,9 @@
     <div class="container">
 
     </div>
+    <input type="button" value="开始计时！" onClick="timedCount()">
+    <input type="text" id="txt">
+    <input type="button" value="停止计时！" onClick="stopCount()">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script>
         var arr = [5, 4, 8, 9, 6, 5, 4, 12, 3, 6, 7, 8, 56];
@@ -125,6 +129,16 @@
             }
         }
         window.onscroll = throttle(scrollFn, 100, 500);
+        var c = 0;
+        var  t 
+        function timedCount(){
+            document.getElementById('txt').value = c
+            c= c+1
+            t = setTimeout("timedCount()",1000)
+        }
+        function stopCount(){
+            clearTimeout(t)
+        }
     </script>
 </body>
 
