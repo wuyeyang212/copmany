@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../assets/js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>原始文本信息：{{message}}</p>
+        <p>v-model: <input type="text" v-model="message"></p>
+        <p>v-model.lazy: <input type="text" v-model.lazy="message"></p>
+        <p>v-model.number: <input type="text" v-model.number="message"></p>
+        <p>v-model.trim: <input type="text" v-model.trim="message"></p>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'hello Vue'
+            }
+        })
+    </script>
+</body>
+
+</html>
