@@ -1,3 +1,4 @@
 #jQueryGwc
 #/node_modules/
 # *.json
+/vue/node_modules
