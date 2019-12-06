@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <style>
+    /* rect:hover {
+      fill: orange;
+    } */
+    #tooltip {
+      position: absolute;
+      width: 200px;
+      height: auto;
+      padding: 10px;
+      background-color: white;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+      pointer-events: none;
+    }
+
+    #tooltip.hidden {
+      display: none;
+    }
+
+    #tooltip p {
+      margin: 0;
+      font-family: sans-serif;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <p>Click on this text to update the chart with new data values (once).</p>
+  <div id="tooltip" class="hidden">
+    <p><strong>Important Label Heading</strong></p>
+    <p><span id="value">100</span>%</p>
+  </div>
+  <script>
+    var width = 600;
+    var height = 400;
+    //创建画布
+    var svg = d3.select('body')
+      .append('svg')
+      .attr('width', width)
+      .attr('height', height)
+
+    var padding = {
+      top: 20,
+      left: 20,
+      right: 20,
+      bottom: 20
+    }
+    var rectstep = 35; //矩形的宽带偏白
+    var rectwidth = 30; //矩形的宽
+
+    var dataset = [216, 86, 158, 76, 203, 300, 120, 110, 120, 89, 55, 25]
+    //         var dataset = [ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
+    // 11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ];
+    // 根据数据填充矩形
+
+    var xScale = d3.scaleOrdinal()
+      .domain(d3.range(dataset.length))
+      .range([0, width]);
+    var rect = svg.selectAll('rect')
+      .data(dataset)
+      .enter()
+      .append('rect')
+      .transition()
+
+      .delay(function (d, i) {
+        return i * 100;
+      })
+      .duration(500)
+
+      .attr('fill', function (d) {
+        return "rgb(0, 0, " + (d / 2) + ")";
+      })
+      .attr('x', function (d, i) {
+        return i * (width / dataset.length);
+        // return xScale(i)
+      })
+      .attr('y', function (d, i) {
+        return height - padding.bottom - d;
+      })
+      .attr('width', width / dataset.length - 1)
+      .attr('height', function (d, i) {
+        return d;
+      })
+
+    //根据数据填充文本内容              
+    var text = svg.selectAll('text')
+      .data(dataset)
+      .enter()
+      .append('text')
+      .attr('fill', 'white')
+      .attr('x', function (d, i) {
+        return i * (width / dataset.length) + (width / dataset.length - 1) / 2 - 14;
+      })
+      .attr('y', function (d, i) {
+        return height - d - 15;
+      })
+      .attr('text-anchor', 'middle')
+      .attr('font-size', '14px')
+      .attr('dx', rectwidth / 2)
+      .attr('dy', '1em')
+      .text(function (d, i) {
+        return d;
+      })
+    d3.select("p")
+      .on("click", function () {
+        // 新数据集
+        dataset = [200, 86, 158, 76, 203, 300, 120, 110, 120, 89, 55, 25];
+        // 更新所有矩形
+        svg.selectAll("rect")
+          .data(dataset)
+          .attr("y", function (d) {
+            return height - padding.bottom - d;
+          })
+          .attr("height", function (d) {
+            return d;
+          });
+        svg.selectAll('text')
+          .data(dataset)
+
+          .attr('y', function (d, i) {
+            return height - d - 15;
+          })
+
+          .text(function (d, i) {
+            return d;
+          })
+      });
+    svg.selectAll('rect')
+      .on("mouseout", function (d) {
+        d3.select(this)
+          .transition()
+          .duration(250)
+          .attr("fill", function (d) {
+            return "rgb(0, 0, " + (d / 2) + ")";
+          });
+      })
+      .on("mouseover", function (d) {
+        // 取得条形的 x/y 值，增大后作为提示条的坐标
+        var xPosition = parseFloat(d3.select(this).attr("x")) / 2;
+        var yPosition = parseFloat(d3.select(this).attr("y")) / 2 + height / 2;
+        // 更新提示条的位置和值
+        console.log(xPosition, yPosition)
+        d3.select("#tooltip")
+          .style("left", xPosition + "px")
+          .style("top", yPosition + "px")
+          .select("#value")
+          .text(d);
+        // 显示提示条
+        d3.select("#tooltip").classed("hidden", false);
+      })
+  </script>
+</body>
+
+</html>
