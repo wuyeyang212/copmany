@@ -1,69 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <style>
-        .bg {
-          position: absolute;
-          left: 0;
-          top: 0;
-          bottom: 0;
-          right: 0;
-        }
-        .bg1 {
-          z-index: 10;
-          background-color: #000;
-        }
-        .bg2 {
-          background-color: #06c;
-        }
-        .bg3 {
-          background-color: #f0c;
-        }
-        .skin-btn-wrap {
-          position: absolute;
-          padding: 4px 10px;
-          border-radius: 20px;
-          line-height: 20px;
-          background-color: #fff;
-          z-index: 11;
-          right: 20px;
-          top: 20px;
-        }
-        .skin-btn-wrap a {
-          display: inline-block;
-          width: 20px;
-          height: 20px;
-          border-radius: 10px;
-        }
-        #one {
-          background-color: #000;
-        }
-        #two {
-          background-color: #06c;
-        }
-        #three {
-          background-color: #f0c;
-        }
-        .bg:target {
-          z-index: 10;
-        }
-        .bg:not(:target) {
-          z-index: 0;
-        }
-      </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .bg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    .bg1 {
+      z-index: 10;
+      background-color: #000;
+    }
+
+    .bg2 {
+      background-color: #06c;
+    }
+
+    .bg3 {
+      background-color: #f0c;
+    }
+
+    .skin-btn-wrap {
+      position: absolute;
+      padding: 4px 10px;
+      border-radius: 20px;
+      line-height: 20px;
+      background-color: #fff;
+      z-index: 11;
+      right: 20px;
+      top: 20px;
+    }
+
+    .skin-btn-wrap a {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+    }
+
+    #one {
+      background-color: #000;
+    }
+
+    #two {
+      background-color: #06c;
+    }
+
+    #three {
+      background-color: #f0c;
+    }
+
+    .bg:target {
+      z-index: 10;
+    }
+
+    .bg:not(:target) {
+      z-index: 0;
+    }
+  </style>
 </head>
+
 <body>
-    <div class="bg1 bg" id="bg1"></div>
-    <div class="bg2 bg" id="bg2"></div>
-    <div class="bg3 bg" id="bg3"></div>
-    <div class="skin-btn-wrap">
-        <a href="#bg1" id="one"></a>
-        <a href="#bg2" id="two"></a>
-        <a href="#bg3" id="three"></a>
-    </div>
+  <div class="bg1 bg" id="bg1"></div>
+  <div class="bg2 bg" id="bg2"></div>
+  <div class="bg3 bg" id="bg3"></div>
+  <div class="skin-btn-wrap">
+    <a href="#bg1" id="one"></a>
+    <a href="#bg2" id="two"></a>
+    <a href="#bg3" id="three"></a>
+  </div>
+  <script>
+    var wizards = [{
+        name: 'Harry Potter',
+        house: 'Gryfindor'
+      },
+      {
+        name: 'Cedric Diggory',
+        house: 'Hufflepuff'
+      },
+      {
+        name: 'Tonks',
+        house: 'Hufflepuff'
+      },
+      {
+        name: 'Ronald Weasley',
+        house: 'Gryfindor'
+      },
+      {
+        name: 'Hermione Granger',
+        house: 'Gryfindor'
+      }
+    ];
+    var points = {
+      HarryPotter: 500,
+      CedricDiggory: 750,
+      RonaldWeasley: 100,
+      HermioneGranger: 1270
+    };
+
+    var wizardsWithPoints = wizards.reduce(function (arr, wizard) {
+      console.log(wizard)
+      // 移除巫师名字中的空格，用来获取对应的 points
+      var key = wizard.name.replace(' ', '');
+
+      // 如果wizard有points，则加上它，否则设置为0
+      if (points[key]) {
+        wizard.points = points[key];
+      } else {
+        wizard.points = 0;
+      }
+
+      // 把wizard对象加入到新数组里
+      arr.push(wizard);
+
+      // 返回这个数组
+      return arr;
+
+    }, []);
+
+    var wizarKIO = wizards.reduce(function (obj, wizard) {
+
+      // 移除巫师名字中的空格，用来获取对应的 points
+      var key = wizard.name.replace(' ', '');
+
+      // 如果wizard有points，则加上它，否则设置为0
+      if (points[key]) {
+        wizard.points = points[key];
+      } else {
+        wizard.points = 0;
+      }
+
+      // 删除 name 属性
+      delete wizard.name;
+
+      // 把 wizard 数据添加到新对象中
+      obj[key] = wizard;
+
+      // 返回该对象
+      return obj;
+
+    }, {});
+    console.log(wizarKIO)
+  </script>
 </body>
+
 </html>
