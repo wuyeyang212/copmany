@@ -8,6 +8,6 @@ const enhancer = composeEnhancers(applyMiddleware(thunk))
 
 const store = createStore(
     reducer,
-    enhancer
+    enhancer 
 )
 export default store

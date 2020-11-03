@@ -15,3 +15,4 @@ export const getListAction= (data)=>({
     type:GET_LIST,
     data
 })
+

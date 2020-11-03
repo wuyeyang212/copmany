@@ -6,9 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        #gradientColor{
+            width:200px;
+            height:200px;
+            /*background-image:-moz-linear-gradient(top, red, green);*/
+            background-image:linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+            background-size:200px 200px;
+            background-color:red;
+            animation: rainbown 2s;
+            /* transition:width 1s ease-in 0s; */
+
+        }
+        .bigerWidth{
+            width:500px;
+        }
+        .keyboard{
+            width: 500px;
+            animation: 3s rainbown;
+        }
+        @keyframes rainbown {
+            from{width:200px;}
+            to{width: 500px;}
+        }
+    </style>
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        var sui = true
+        function ChangeWidth()
+        {
+        //    if(sui){
+        //     $("#gradientColor").animate({width:'500px'},150)
+        //    }else{
+        //     $("#gradientColor").animate({width:'200px'},150)
+        //    }
+        
+           if(sui){
+            $("#gradientColor").addClass('keyboard')
+           }
+           sui = !sui
+        }
+    </script>
 </head>
 
+
+
 <body>
+    <div id="gradientColor" onclick="ChangeWidth()"></div>
     <script>
         const cityList = new Promise((resolve, reject) => {
             $.ajax({

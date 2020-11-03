@@ -86,6 +86,7 @@
         return "rgb(0, 0, " + (d / 2) + ")";
       })
       .attr('x', function (d, i) {
+        console.log(i * (width / dataset.length))
         return i * (width / dataset.length);
         // return xScale(i)
       })
@@ -154,7 +155,7 @@
         var xPosition = parseFloat(d3.select(this).attr("x")) / 2;
         var yPosition = parseFloat(d3.select(this).attr("y")) / 2 + height / 2;
         // 更新提示条的位置和值
-        console.log(xPosition, yPosition)
+        // console.log(xPosition, yPosition)
         d3.select("#tooltip")
           .style("left", xPosition + "px")
           .style("top", yPosition + "px")
