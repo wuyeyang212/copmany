@@ -10,6 +10,7 @@
     <div>
       {{ kNAEM == "Shen" ? "1" : "2" }}
     </div>
+     <div @click="pageto">点击跳转</div>
   </div>
 </template>
 <script>
@@ -30,6 +31,9 @@ export default {
         rior.value = res.imgUrl;
       });
     };
+    const pageto = ()=>{
+      ctx.$router.push("/")
+    }
     // const {result,loading,loaded} = userUrlAxios('https://apiblog.jspang.com/default/getGirl')
     // return {result,loading,loaded}
     sior();
@@ -37,6 +41,7 @@ export default {
       rior,
       sior,
       kNAEM,
+      pageto
     };
   },
 };
