@@ -1,4 +1,4 @@
-import {Http} from './ util'
+import {Http} from './util'
 
 class Book extends Http{
     getrelrlir(){
