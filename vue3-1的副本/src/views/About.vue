@@ -2,23 +2,24 @@
   <div class="about">
     <h1>This is an about pageone</h1>
     <div>
-      {{nowtime}}
+      {{ nowtime }}
     </div>
     <div>
       <button @click="xianshi">显示时间</button>
     </div>
   </div>
 </template>
-<script lang = 'ts'>
-import {nowtime,xianshi} from "../uiro/one"
+<script lang="ts">
+import { nowtime, xianshi } from "../uiro/one";
 export default {
-  name:'aie',
-  setup(){
+  name: "aie",
+  setup() {
     // xianshi()
-    return{
+
+    return {
       nowtime,
-      xianshi
-    }
+      xianshi,
+    };
   },
-}
+};
 </script>

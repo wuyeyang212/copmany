@@ -7,19 +7,19 @@
       </div> 
     <img :src="result.imgUrl" v-if='loaded' alt="">-->
     <div>{{ rior }}</div>
-    <div>
-      {{ kNAEM == "Shen" ? "1" : "2" }}
-    </div>
+    <div>{{ kNAEM == "Shen" ? "1" : "2" }}</div>
   </div>
 </template>
 <script>
 //import userUrlAxios from "../uiro/userUrlAxios"
 import { ref, getCurrentInstance } from "vue";
-import { Book } from "../uiro/book.js";
+import { Book, getQueryString } from "../uiro/book.js";
 // console.log(ctx.$router.options.routes);这个h是整个router
 export default {
   name: "shen",
   setup() {
+    var opt = window.location.href.split("=")[1];
+    console.log(opt);
     const { ctx } = getCurrentInstance();
     const Bookop = new Book();
     console.log(ctx.$route.name);
@@ -30,6 +30,7 @@ export default {
         rior.value = res.imgUrl;
       });
     };
+
     // const {result,loading,loaded} = userUrlAxios('https://apiblog.jspang.com/default/getGirl')
     // return {result,loading,loaded}
     sior();
