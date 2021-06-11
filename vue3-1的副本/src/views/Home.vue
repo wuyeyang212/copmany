@@ -10,6 +10,7 @@
     <div>
       <button @click="cauir">点餐</button>
     </div>
+   
     <div>
       {{overText}}
     </div>
@@ -19,7 +20,7 @@
 <script lang="ts">
 //reactive()
 //import { defineComponent,ref,reactive} from 'vue';
-import { reactive,toRefs,onBeforeMount,onMounted,onBeforeUpdate,onUpdated,onRenderTracked,onRenderTriggered,ref} from 'vue';
+import { reactive,toRefs,onBeforeMount,onMounted,onBeforeUpdate,onUpdated,onRenderTracked,onRenderTriggered,ref,getCurrentInstance} from 'vue';
  interface Dsta{
    gils:string[];
    selectgirl:string;
@@ -35,6 +36,7 @@ export default {
     //   selectgirl.value = gils.value[index]
     // };
     console.log("1--开始创建组建--setup")
+   
     const data:Dsta= reactive({
       gils:["大叫","柳荫","小红"],
       selectgirl:'',
@@ -67,6 +69,7 @@ export default {
     const cauir = ()=>{
       overText.value = '你已经点餐完毕'+ overText.value
     }
+    
     return {
       // gils,
       // selectgirl,
@@ -74,7 +77,7 @@ export default {
       // data
       ...refData,
       overText,
-      cauir
+      cauir,
     }
   }
 };
