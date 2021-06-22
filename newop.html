@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var m = new Map(); //new一个对象 ，键值唯一
+        m.set(1, "aaaaaaa"); // 添加值
+        m.set(2, "dddddd");
+        m.set("h",{name:1,name:2});
+        m.set("sex", 2);
+        m.set({ a: 2 }, 3);
+        m.set({ a: 2 }, 3);// 只会输出一个来
+       function funsio(){
+        m.forEach(function (item, key, mapObj) {
+            // console.log(item);
+            console.log(key);
+            // if(key=="h"){
+
+            // }
+            // console.log(mapObj);
+        });
+       }
+       funsio()
+        
+    </script>
+</body>
+
+</html>
